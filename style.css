@@ -178,6 +178,12 @@ a:hover {
 .btn:hover {
   color: #fff !important; }
 
+.fixLogo {
+  float: center;
+  width: 70%;
+  height: auto;
+}
+
 /* HEADER NAVIGATION */
 .logo {
   float: left;
