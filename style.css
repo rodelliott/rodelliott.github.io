@@ -178,11 +178,6 @@ a:hover {
 .btn:hover {
   color: #fff !important; }
 
-.fixLogo {
-  width: 50%;
-  height: auto;
-}
-
 /* HEADER NAVIGATION */
 .logo {
   float: left;
@@ -740,7 +735,9 @@ div#terms-conditions > div p, div#terms-conditions > div li{
     height: 200px; }
 
   .hero-title img {
-    display: none; }
+    width: 50%;
+    height: auto;
+  }
 
   .bg {
     height: 200px; }
