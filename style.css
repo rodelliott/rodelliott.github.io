@@ -231,7 +231,7 @@ a:hover {
   width: 500px; }
 
 .subtitle {
-  font-size: 1vw; /* Switched to VW for responsive type*/
+  font-size: 2vw; /* Switched to VW for responsive type*/
   font-family: 'Lato'; }
 
 /* BUTTONS */
