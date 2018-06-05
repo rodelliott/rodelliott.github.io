@@ -435,6 +435,13 @@ input {
   background-size: cover;
   background-position: center; }
 
+  .goodnews-landing-hero {
+    background-image: url("images/img/newsHeader.jpg");
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center; }
+
 .partners-landing-hero {
   background-image: url("images/img/partners.jpg");
   width: 100%;
