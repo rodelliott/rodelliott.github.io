@@ -1,48 +1,241 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>ruby-install | Your awesome title</title>
-<meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="ruby-install" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/ruby-install-0.6.1/" />
-<meta property="og:url" content="http://localhost:4000/ruby-install-0.6.1/" />
-<meta property="og:site_name" content="Your awesome title" />
-<script type="application/ld+json">
-{"url":"http://localhost:4000/ruby-install-0.6.1/","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"ruby-install","@type":"WebPage","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
-<body><header class="site-header" role="banner">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+  <title>ruby-install</title>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/ruby-install-0.6.1/ChangeLog.html">0.6.1 / 2016-12-24</a><a class="page-link" href="/ruby-install-0.6.1/doc/man/ruby-install.1.html">ruby-install 1 “Dec 2016” ruby-install “User Manuals”</a><a class="page-link" href="/ruby-install-0.6.1/">ruby-install</a></div>
-      </nav></div>
+  <meta name="author" content="Some Person" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="My website - A virtual proof that name is awesome!" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="ruby-install" />
+  
+
+   
+  <meta property="og:description" content="# ruby-install [![Build Status](https://travis-ci.org/postmodern/ruby-install.svg?branch=master)](https://travis-ci.org/postmodern/ruby-install) Installs [Ruby], [JRuby], [Rubinius], [MagLev] or [mruby]. ## Features * Supports installing arbitrary versions. * Supports downloading the latest versions and checksums from [ruby-versions]. * Supports installing into `/opt/rubies/` for root and `~/.rubies/` for users by default. * Supports installing into arbitrary directories. * Supports downloading...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/ruby-install-0.6.1/" />
+  <link rel="canonical" href="http://localhost:4000/ruby-install-0.6.1/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="ruby-install" />
+  
+
+  
+  <meta name="twitter:description" content="# ruby-install [![Build Status](https://travis-ci.org/postmodern/ruby-install.svg?branch=master)](https://travis-ci.org/postmodern/ruby-install) Installs [Ruby], [JRuby], [Rubinius], [MagLev] or [mruby]. ## Features * Supports installing arbitrary versions. * Supports downloading the latest versions and checksums from [ruby-versions]. * Supports installing into `/opt/rubies/` for root and `~/.rubies/` for users by default. * Supports installing into arbitrary directories. * Supports downloading...">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">My website</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://www.markdowntutorial.com/">Learn markdown</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://pages.github.com/">GitHub Pages</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="http://deanattali.com">Author's home</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000 ">
+	      <img class="avatar-img" src="/img/avatar-icon.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>ruby-install</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">ruby-install</h1>
-  </header>
 
-  <div class="post-content">
-    <h1 id="ruby-install">ruby-install</h1>
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h1 id="ruby-install">ruby-install</h1>
 
 <p><a href="https://travis-ci.org/postmodern/ruby-install"><img src="https://travis-ci.org/postmodern/ruby-install.svg?branch=master" alt="Build Status" /></a></p>
 
@@ -99,100 +292,118 @@ by default.</li>
 
 <p>List supported Rubies and their major versions:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install
+</code></pre>
+</div>
 
 <p>List the latest versions:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --latest
+</code></pre>
+</div>
 
 <p>Install the current stable version of Ruby:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install ruby
+</code></pre>
+</div>
 
 <p>Install the latest version of Ruby:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest ruby
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --latest ruby
+</code></pre>
+</div>
 
 <p>Install a stable version of Ruby:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.3
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install ruby 2.3
+</code></pre>
+</div>
 
 <p>Install a specific version of Ruby:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.2.4
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install ruby 2.2.4
+</code></pre>
+</div>
 
 <p>Install a Ruby into a specific directory:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --install-dir /path/to/dir ruby
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --install-dir /path/to/dir ruby
+</code></pre>
+</div>
 
 <p>Install a Ruby into a specific <code class="highlighter-rouge">rubies</code> directory:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir /path/to/rubies/ ruby
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --rubies-dir /path/to/rubies/ ruby
+</code></pre>
+</div>
 
 <p>Install a Ruby into <code class="highlighter-rouge">/usr/local</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --system ruby 2.4.0
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --system ruby 2.4.0
+</code></pre>
+</div>
 
 <p>Install a Ruby from an official site with directly download:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M https://ftp.ruby-lang.org/pub/ruby ruby 2.4.0
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install -M https://ftp.ruby-lang.org/pub/ruby ruby 2.4.0
+</code></pre>
+</div>
 
 <p>Install a Ruby from a mirror:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M http://www.mirrorservice.org/sites/ftp.ruby-lang.org/pub/ruby ruby 2.0.0-p645
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install -M http://www.mirrorservice.org/sites/ftp.ruby-lang.org/pub/ruby ruby 2.0.0-p645
+</code></pre>
+</div>
 
 <p>Install a Ruby with a specific patch:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -p https://raw.github.com/gist/4136373/falcon-gc.diff ruby 1.9.3-p551
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install -p https://raw.github.com/gist/4136373/falcon-gc.diff ruby 1.9.3-p551
+</code></pre>
+</div>
 
 <p>Install a Ruby with a specific C compiler:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- CC=gcc-4.9
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- CC=gcc-4.9
+</code></pre>
+</div>
 
 <p>Install a Ruby with specific configuration:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- --enable-shared --enable-dtrace CFLAGS="-O3"
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- --enable-shared --enable-dtrace CFLAGS="-O3"
+</code></pre>
+</div>
 
 <p>Uninstall a Ruby version:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -rf ~/.rubies/ruby-2.4.0
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rm -rf ~/.rubies/ruby-2.4.0
+</code></pre>
+</div>
 
 <h3 id="integration">Integration</h3>
 
 <p>Using ruby-install with <a href="https://rvm.io/">RVM</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir ~/.rvm/rubies ruby 2.4.0
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --rubies-dir ~/.rvm/rubies ruby 2.4.0
+</code></pre>
+</div>
 
 <p>Using ruby-install with <a href="https://github.com/sstephenson/rbenv#readme">rbenv</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --install-dir ~/.rbenv/versions/2.4.0 ruby 2.4.0
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ruby-install --install-dir ~/.rbenv/versions/2.4.0 ruby 2.4.0
+</code></pre>
+</div>
 
 <p>ruby-install can even be used with <a href="https://github.com/rosstimson/chef-ruby_install#readme">Chef</a>.</p>
 
 <h2 id="install">Install</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
+<div class="highlighter-rouge"><pre class="highlight"><code>wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
 tar -xzvf ruby-install-0.6.0.tar.gz
 cd ruby-install-0.6.0/
 sudo make install
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h3 id="pgp">PGP</h3>
 
@@ -200,28 +411,32 @@ sudo make install
 PGP key can be found on my <a href="http://postmodern.github.com/contact.html#pgp">blog</a>. To verify that a release was not tampered
 with:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://raw.github.com/postmodern/ruby-install/master/pkg/ruby-install-0.6.0.tar.gz.asc
+<div class="highlighter-rouge"><pre class="highlight"><code>wget https://raw.github.com/postmodern/ruby-install/master/pkg/ruby-install-0.6.0.tar.gz.asc
 gpg --verify ruby-install-0.6.0.tar.gz.asc ruby-install-0.6.0.tar.gz
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <h3 id="homebrew">Homebrew</h3>
 
 <p>ruby-install can also be installed with <a href="http://brew.sh/">homebrew</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install ruby-install
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install ruby-install
+</code></pre>
+</div>
 
 <p>Or the absolute latest ruby-install can be installed from source:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install ruby-install --HEAD
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install ruby-install --HEAD
+</code></pre>
+</div>
 
 <h3 id="arch-linux">Arch Linux</h3>
 
 <p>ruby-install is already included in the <a href="https://aur.archlinux.org/packages/ruby-install/">AUR</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yaourt -S ruby-install
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>yaourt -S ruby-install
+</code></pre>
+</div>
 
 <h3 id="freebsd">FreeBSD</h3>
 
@@ -236,14 +451,16 @@ ports tree.</p>
 <a href="http://gcc.gnu.org/">GCC</a> &gt;= 4.2. Normally, Linux and BSD systems will already have GCC
 installed. OS X users can install GCC via <a href="http://brew.sh/">homebrew</a>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap homebrew/versions
+<div class="highlighter-rouge"><pre class="highlight"><code>brew tap homebrew/versions
 brew install gcc49
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>And run ruby-install again:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby-install ruby 2.4.0 -- CC=gcc-4.9
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>ruby-install ruby 2.4.0 -- CC=gcc-4.9
+</code></pre>
+</div>
 
 <h3 id="rubinius">Rubinius</h3>
 
@@ -267,35 +484,101 @@ Instead, please use Rubinius &gt;= 2.1.x.</p>
 of <a href="https://github.com/sstephenson/rbenv#readme">rbenv</a></p>
 
 
+	    
+    </div>
   </div>
-
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Your awesome title</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
 </div>
 
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto:someone@example.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/daattali" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/daattali" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://twitter.com/daattali" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Some Person
+      &nbsp;&bull;&nbsp;
+      2018
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">MyWebsite.com</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
       </div>
     </div>
-
   </div>
-
 </footer>
-</body>
 
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+
+  
+  </body>
 </html>
