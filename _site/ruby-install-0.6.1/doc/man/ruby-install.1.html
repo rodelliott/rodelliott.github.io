@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>ruby-install 1 “Dec 2016” ruby-install “User Manuals” | Your awesome title</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="ruby-install 1 “Dec 2016” ruby-install “User Manuals”" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/ruby-install-0.6.1/doc/man/ruby-install.1.html" />
+<meta property="og:url" content="http://localhost:4000/ruby-install-0.6.1/doc/man/ruby-install.1.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/ruby-install-0.6.1/doc/man/ruby-install.1.html","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"ruby-install 1 “Dec 2016” ruby-install “User Manuals”","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/ruby-install-0.6.1/ChangeLog.html">0.6.1 / 2016-12-24</a><a class="page-link" href="/ruby-install-0.6.1/doc/man/ruby-install.1.html">ruby-install 1 “Dec 2016” ruby-install “User Manuals”</a><a class="page-link" href="/ruby-install-0.6.1/">ruby-install</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ruby-install 1 “Dec 2016” ruby-install “User Manuals”</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="ruby-install-1-dec-2016-ruby-install-user-manuals">ruby-install 1 “Dec 2016” ruby-install “User Manuals”</h1>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ruby-install</code> [[RUBY-VERSION</td>
+      <td>RUBY [VERSION]] [– CONFIGURE_OPTS…]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="description">DESCRIPTION</h2>
+
+<p>Installs Ruby, JRuby, Rubinius or MagLev.</p>
+
+<p>https://github.com/postmodern/ruby-install#readme</p>
+
+<h2 id="arguments">ARGUMENTS</h2>
+
+<p><em>RUBY</em>
+	Install Ruby by name.</p>
+
+<p><em>VERSION</em>
+	Optionally select the version of selected Ruby.</p>
+
+<p><em>CONFIGURE_OPTS</em>
+	Additional optional configure arguments.</p>
+
+<h2 id="options">OPTIONS</h2>
+
+<p><code class="highlighter-rouge">-r</code>, <code class="highlighter-rouge">--rubies-dir</code> <em>DIR</em>
+	Specifies the alternate directory where other Ruby directories are
+	installed, such as <em>~/.rvm/rubies</em> or <em>~/.rbenv/versions</em>.
+	Defaults to <em>/opt/rubies</em> for root and <em>~/.rubies</em> for normal users.</p>
+
+<p><code class="highlighter-rouge">-i</code>, <code class="highlighter-rouge">--install-dir</code> <em>DIR</em>
+	Specifies the directory where Ruby will be installed.
+	Defaults to <em>/opt/rubies/$ruby-$version</em> for root and
+	<em>~/.rubies/$ruby-$version</em> for normal users.</p>
+
+<p><code class="highlighter-rouge">--prefix</code> <em>DIR</em>
+	Alias for <code class="highlighter-rouge">-i DIR</code>.</p>
+
+<p><code class="highlighter-rouge">--system</code>
+	Alias for <code class="highlighter-rouge">-i /usr/local</code>.</p>
+
+<p><code class="highlighter-rouge">-s</code>, <code class="highlighter-rouge">--src-dir</code> <em>DIR</em>
+	Specifies the directory for downloading and unpacking Ruby source.</p>
+
+<p><code class="highlighter-rouge">-c</code>, <code class="highlighter-rouge">--cleanup</code>
+	Remove the downloaded Ruby archive and unpacked source-code after
+	installation.</p>
+
+<p><code class="highlighter-rouge">-j[</code><em>JOBS</em><code class="highlighter-rouge">]</code>, <code class="highlighter-rouge">--jobs[=</code><em>JOBS</em><code class="highlighter-rouge">]</code>
+	Specifies the number of <em>make</em> jobs to run in parallel when compiling
+	Ruby. If the -j option is provided without an argument, <em>make</em> will
+	allow an unlimited number of simultaneous jobs.</p>
+
+<p><code class="highlighter-rouge">-p</code>, <code class="highlighter-rouge">--patch</code> <em>FILE</em>
+	Specifies any additional patches to apply.</p>
+
+<p><code class="highlighter-rouge">-M</code>, <code class="highlighter-rouge">--mirror</code> <em>URL</em>
+	Specifies an alternate mirror to download the Ruby archive from.</p>
+
+<p><code class="highlighter-rouge">-u</code>, <code class="highlighter-rouge">--url</code> <em>URL</em>
+	Alternate URL to download the Ruby archive from.</p>
+
+<p><code class="highlighter-rouge">-m</code>, <code class="highlighter-rouge">--md5</code> <em>MD5</em>
+	Specifies the MD5 checksum for the Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--sha1</code> <em>SHA1</em>
+	Specifies the SHA1 checksum for the Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--sha256</code> <em>SHA256</em>
+	Specifies the SHA256 checksum for the Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--sha512</code> <em>SHA512</em>
+	Specifies the SHA512 checksum for the Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--no-download</code>
+	Use the previously downloaded Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--no-verify</code>
+	Do not verify the downloaded Ruby archive.</p>
+
+<p><code class="highlighter-rouge">--no-extract</code>
+	Do not extract the downloaded Ruby archive. Implies <code class="highlighter-rouge">--no-download</code>
+	and <code class="highlighter-rouge">--no-verify</code>.</p>
+
+<p><code class="highlighter-rouge">--no-install-deps</code>
+	Do not install build dependencies before installing Ruby.</p>
+
+<p><code class="highlighter-rouge">--no-reinstall</code>
+	Skip installation if another Ruby is detected in same location.</p>
+
+<p><code class="highlighter-rouge">-L</code>, <code class="highlighter-rouge">--latest</code>
+	Downloads the latest ruby versions and checksums from the ruby-versions
+	repository (https://github.com/postmodern/ruby-versions#readme).</p>
+
+<p><code class="highlighter-rouge">-V</code>, <code class="highlighter-rouge">--version</code>
+	Prints the current ruby-install version.</p>
+
+<p><code class="highlighter-rouge">-h</code>, <code class="highlighter-rouge">--help</code>
+	Prints a synopsis of ruby-install usage.</p>
+
+<h2 id="examples">EXAMPLES</h2>
+
+<p>List supported Rubies and their major versions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install
+</code></pre></div></div>
+
+<p>List the latest versions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest
+</code></pre></div></div>
+
+<p>Install the current stable version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby
+</code></pre></div></div>
+
+<p>Install the latest version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest ruby
+</code></pre></div></div>
+
+<p>Install a latest version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.3
+</code></pre></div></div>
+
+<p>Install a specific version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.2.4
+</code></pre></div></div>
+
+<p>Install a Ruby into a specific directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --install-dir /path/to/dir ruby
+</code></pre></div></div>
+
+<p>Install a Ruby into a specific <code class="highlighter-rouge">rubies</code> directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir /path/to/rubies/ ruby
+</code></pre></div></div>
+
+<p>Install a Ruby into <code class="highlighter-rouge">/usr/local</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --system ruby 2.4.0
+</code></pre></div></div>
+
+<p>Install a Ruby from an official site with directly download:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M https://ftp.ruby-lang.org/pub/ruby ruby 2.4.0
+</code></pre></div></div>
+
+<p>Install a Ruby from a mirror:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M http://www.mirrorservice.org/sites/ftp.ruby-lang.org/pub/ruby ruby 2.4.0
+</code></pre></div></div>
+
+<p>Install a Ruby with a specific patch:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -p https://raw.github.com/gist/4136373/falcon-gc.diff ruby 1.9.3-p551
+</code></pre></div></div>
+
+<p>Install a Ruby with specific configuration:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- --enable-shared --enable-dtrace CFLAGS="-O3"
+</code></pre></div></div>
+
+<p>Using ruby-install with [RVM]:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir ~/.rvm/rubies ruby 2.4.0
+</code></pre></div></div>
+
+<p>Using ruby-install with [rbenv]:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -i ~/.rbenv/versions/2.4.0 ruby 2.4.0
+</code></pre></div></div>
+
+<p>Uninstall a Ruby version:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -rf ~/.rubies/ruby-2.4.0
+</code></pre></div></div>
+
+<h2 id="files">FILES</h2>
+
+<p><em>/usr/local/src</em>
+	Default root user source directory.</p>
+
+<p><em>~/src</em>
+	Default non-root user source directory.</p>
+
+<p><em>/opt/rubies/$ruby-$version</em>
+	Default root user installation directory.</p>
+
+<p><em>~/.rubies/$ruby-$version</em>
+	Default non-root user installation directory.</p>
+
+<h2 id="author">AUTHOR</h2>
+
+<p>Postmodern <a href="mailto:postmodern.mod3@gmail.com">postmodern.mod3@gmail.com</a></p>
+
+<h2 id="see-also">SEE ALSO</h2>
+
+<p>ruby(1), gem(1), chruby(1), chruby-exec(1)</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

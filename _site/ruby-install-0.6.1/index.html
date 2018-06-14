@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>ruby-install | Your awesome title</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="ruby-install" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/ruby-install-0.6.1/" />
+<meta property="og:url" content="http://localhost:4000/ruby-install-0.6.1/" />
+<meta property="og:site_name" content="Your awesome title" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/ruby-install-0.6.1/","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"ruby-install","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/ruby-install-0.6.1/ChangeLog.html">0.6.1 / 2016-12-24</a><a class="page-link" href="/ruby-install-0.6.1/doc/man/ruby-install.1.html">ruby-install 1 “Dec 2016” ruby-install “User Manuals”</a><a class="page-link" href="/ruby-install-0.6.1/">ruby-install</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ruby-install</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="ruby-install">ruby-install</h1>
+
+<p><a href="https://travis-ci.org/postmodern/ruby-install"><img src="https://travis-ci.org/postmodern/ruby-install.svg?branch=master" alt="Build Status" /></a></p>
+
+<p>Installs <a href="http://www.ruby-lang.org/">Ruby</a>, <a href="http://jruby.org/">JRuby</a>, <a href="http://rubini.us/">Rubinius</a>, <a href="http://maglev.github.io/">MagLev</a> or <a href="https://github.com/mruby/mruby#readme">mruby</a>.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Supports installing arbitrary versions.</li>
+  <li>Supports downloading the latest versions and checksums from <a href="https://github.com/postmodern/ruby-versions#readme">ruby-versions</a>.</li>
+  <li>Supports installing into <code class="highlighter-rouge">/opt/rubies/</code> for root and <code class="highlighter-rouge">~/.rubies/</code> for users
+by default.</li>
+  <li>Supports installing into arbitrary directories.</li>
+  <li>Supports downloading from arbitrary URLs.</li>
+  <li>Supports downloading from mirrors.</li>
+  <li>Supports downloading/applying patches.</li>
+  <li>Supports specifying arbitrary <code class="highlighter-rouge">./configure</code> options.</li>
+  <li>Supports downloading archives using <code class="highlighter-rouge">wget</code> or <code class="highlighter-rouge">curl</code>.</li>
+  <li>Supports verifying downloaded archives using <code class="highlighter-rouge">md5sum</code>, <code class="highlighter-rouge">md5</code> or <code class="highlighter-rouge">openssl md5</code>.</li>
+  <li>Supports installing build dependencies via the package manager:
+    <ul>
+      <li><a href="http://wiki.debian.org/Apt">apt</a></li>
+      <li><a href="https://fedoraproject.org/wiki/Features/DNF">dnf</a></li>
+      <li><a href="http://yum.baseurl.org/">yum</a></li>
+      <li><a href="https://wiki.archlinux.org/index.php/Pacman">pacman</a></li>
+      <li><a href="https://www.macports.org/">macports</a></li>
+      <li><a href="http://brew.sh">brew</a></li>
+    </ul>
+  </li>
+  <li>Has tests.</li>
+</ul>
+
+<h2 id="anti-features">Anti-Features</h2>
+
+<ul>
+  <li>Does not require updating every time a new Ruby version comes out.</li>
+  <li>Does not require recipes for each individual Ruby version or configuration.</li>
+  <li>Does not support installing trunk/HEAD.</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><a href="http://www.gnu.org/software/bash/">bash</a> &gt;= 3.x</li>
+  <li><a href="http://www.gnu.org/software/wget/">wget</a> &gt; 1.12 or <a href="http://curl.haxx.se/">curl</a></li>
+  <li><code class="highlighter-rouge">md5sum</code>, <code class="highlighter-rouge">md5</code> or <code class="highlighter-rouge">openssl md5</code>.</li>
+  <li><code class="highlighter-rouge">tar</code></li>
+  <li><code class="highlighter-rouge">bzip2</code></li>
+  <li><code class="highlighter-rouge">patch</code> (if <code class="highlighter-rouge">--patch</code> is specified)</li>
+  <li><a href="http://gcc.gnu.org/">gcc</a> &gt;= 4.2 or <a href="http://clang.llvm.org/">clang</a></li>
+</ul>
+
+<h2 id="synopsis">Synopsis</h2>
+
+<p>List supported Rubies and their major versions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install
+</code></pre></div></div>
+
+<p>List the latest versions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest
+</code></pre></div></div>
+
+<p>Install the current stable version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby
+</code></pre></div></div>
+
+<p>Install the latest version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --latest ruby
+</code></pre></div></div>
+
+<p>Install a stable version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.3
+</code></pre></div></div>
+
+<p>Install a specific version of Ruby:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.2.4
+</code></pre></div></div>
+
+<p>Install a Ruby into a specific directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --install-dir /path/to/dir ruby
+</code></pre></div></div>
+
+<p>Install a Ruby into a specific <code class="highlighter-rouge">rubies</code> directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir /path/to/rubies/ ruby
+</code></pre></div></div>
+
+<p>Install a Ruby into <code class="highlighter-rouge">/usr/local</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --system ruby 2.4.0
+</code></pre></div></div>
+
+<p>Install a Ruby from an official site with directly download:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M https://ftp.ruby-lang.org/pub/ruby ruby 2.4.0
+</code></pre></div></div>
+
+<p>Install a Ruby from a mirror:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -M http://www.mirrorservice.org/sites/ftp.ruby-lang.org/pub/ruby ruby 2.0.0-p645
+</code></pre></div></div>
+
+<p>Install a Ruby with a specific patch:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install -p https://raw.github.com/gist/4136373/falcon-gc.diff ruby 1.9.3-p551
+</code></pre></div></div>
+
+<p>Install a Ruby with a specific C compiler:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- CC=gcc-4.9
+</code></pre></div></div>
+
+<p>Install a Ruby with specific configuration:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install ruby 2.4.0 -- --enable-shared --enable-dtrace CFLAGS="-O3"
+</code></pre></div></div>
+
+<p>Uninstall a Ruby version:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -rf ~/.rubies/ruby-2.4.0
+</code></pre></div></div>
+
+<h3 id="integration">Integration</h3>
+
+<p>Using ruby-install with <a href="https://rvm.io/">RVM</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --rubies-dir ~/.rvm/rubies ruby 2.4.0
+</code></pre></div></div>
+
+<p>Using ruby-install with <a href="https://github.com/sstephenson/rbenv#readme">rbenv</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby-install --install-dir ~/.rbenv/versions/2.4.0 ruby 2.4.0
+</code></pre></div></div>
+
+<p>ruby-install can even be used with <a href="https://github.com/rosstimson/chef-ruby_install#readme">Chef</a>.</p>
+
+<h2 id="install">Install</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
+tar -xzvf ruby-install-0.6.0.tar.gz
+cd ruby-install-0.6.0/
+sudo make install
+</code></pre></div></div>
+
+<h3 id="pgp">PGP</h3>
+
+<p>All releases are <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> signed for security. Instructions on how to import my
+PGP key can be found on my <a href="http://postmodern.github.com/contact.html#pgp">blog</a>. To verify that a release was not tampered
+with:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://raw.github.com/postmodern/ruby-install/master/pkg/ruby-install-0.6.0.tar.gz.asc
+gpg --verify ruby-install-0.6.0.tar.gz.asc ruby-install-0.6.0.tar.gz
+</code></pre></div></div>
+
+<h3 id="homebrew">Homebrew</h3>
+
+<p>ruby-install can also be installed with <a href="http://brew.sh/">homebrew</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install ruby-install
+</code></pre></div></div>
+
+<p>Or the absolute latest ruby-install can be installed from source:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install ruby-install --HEAD
+</code></pre></div></div>
+
+<h3 id="arch-linux">Arch Linux</h3>
+
+<p>ruby-install is already included in the <a href="https://aur.archlinux.org/packages/ruby-install/">AUR</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yaourt -S ruby-install
+</code></pre></div></div>
+
+<h3 id="freebsd">FreeBSD</h3>
+
+<p>There is a <a href="https://github.com/steakknife/ruby-install-freebsd#readme">FreeBSD port</a> of ruby-install which can be copied into the local
+ports tree.</p>
+
+<h2 id="known-issues">Known Issues</h2>
+
+<h3 id="ruby">Ruby</h3>
+
+<p>Rubies older than 1.9.3-p429 will not compile with <a href="http://clang.llvm.org/">Clang</a> and require
+<a href="http://gcc.gnu.org/">GCC</a> &gt;= 4.2. Normally, Linux and BSD systems will already have GCC
+installed. OS X users can install GCC via <a href="http://brew.sh/">homebrew</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew tap homebrew/versions
+brew install gcc49
+</code></pre></div></div>
+
+<p>And run ruby-install again:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby-install ruby 2.4.0 -- CC=gcc-4.9
+</code></pre></div></div>
+
+<h3 id="rubinius">Rubinius</h3>
+
+<p><a href="http://rubini.us/">Rubinius</a> 1.x and 2.0.x is not supported due to multiple bugs.
+Instead, please use Rubinius &gt;= 2.1.x.</p>
+
+<h2 id="alternatives">Alternatives</h2>
+
+<ul>
+  <li><a href="https://rvm.io/">RVM</a></li>
+  <li><a href="https://github.com/sstephenson/ruby-build#readme">ruby-build</a></li>
+</ul>
+
+<h2 id="endorsements">Endorsements</h2>
+
+<blockquote>
+  <p>I like the approach you’re taking. Curious to see how it plays out.</p>
+</blockquote>
+
+<p>– <a href="https://twitter.com/sstephenson/status/334461494668443649">Sam Stephenson</a>
+of <a href="https://github.com/sstephenson/rbenv#readme">rbenv</a></p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
