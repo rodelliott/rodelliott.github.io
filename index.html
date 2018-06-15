@@ -4,24 +4,20 @@ title: Rod Elliott
 subtitle: Welcome to my boring site.
 use-site-title: true
 ---
-
 <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
-
 	  {% if post.subtitle %}
 	  <h3 class="post-subtitle">
 	    {{ post.subtitle }}
 	  </h3>
 	  {% endif %}
     </a>
-
     <p class="post-meta">
       Posted on {{ post.date | date: "%B %-d, %Y" }}
     </p>
-
     <div class="post-entry-container">
       {% if post.image %}
       <div class="post-image">
@@ -38,7 +34,6 @@ use-site-title: true
         {% endif %}
       </div>
     </div>
-
     {% if post.tags.size > 0 %}
     <div class="blog-tags">
       Tags:
@@ -51,11 +46,9 @@ use-site-title: true
       {% endif %}
     </div>
     {% endif %}
-
    </article>
   {% endfor %}
 </div>
-
 {% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
