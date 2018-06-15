@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://username.github.io"
+url: "http://donaldrelliott.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -17,7 +17,7 @@ baseurl: ""
 title: Web Developer
 
 # Short description of your site
-description: A virtual proof that name is awesome!
+description: It's my personal site, what else do you want to know?
 
 # --- Navigation bar options --- #
 
@@ -64,28 +64,28 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Rod Elliott
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: true
-  email: "someone@example.com"
-  facebook: daattali
-  github: daattali
-  twitter: daattali
+  #rss: false
+  twitter: rodelliott
+  instagram: rodelliott
+  github: donaldrelliott
+  linkedin: elliotdo
+  email: "me@rodelliott.com"
+#  facebook: daattali
 #  reddit: yourname
 #  google-plus: +DeanAttali
-#  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-#  instagram: deanat78
 #  youtube: user/deanat78
 #  spotify: yourname
-#  telephone: +14159998888
+# telephone: +130
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "RodElliott.com"
 
 # --- Web Statistics Section --- #
 
@@ -237,6 +237,3 @@ prose:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
