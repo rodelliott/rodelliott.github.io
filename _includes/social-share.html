@@ -1,15 +1,13 @@
-l<!-- Check if any share-links are active -->
+<!-- Check if any share-links are active -->
 {% assign any-share-links = false %}
 {% for links in site.share-links-active %}
   {% if links[1] == true %}
     {% assign any-share-links = true %}
   {% endif %}
 {% endfor %}
-
 {% if any-share-links %}
 <section id = "social-share-section">
   <span class="sr-only">Share: </span>
-
   {% if site.share-links-active.twitter %}
   <!--- Share on Twitter -->
     <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}+{{ site.url }}{{ page.url }}"
@@ -18,7 +16,6 @@ l<!-- Check if any share-links are active -->
       <span class="sr-only">Twitter</span>
     </a>
   {% endif %}
-
   {% if site.share-links-active.facebook %}
   <!--- Share on Facebook -->
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
@@ -27,7 +24,6 @@ l<!-- Check if any share-links are active -->
       <span class="sr-only">Facebook</span>
     </a>
   {% endif %}
-
   {% if site.share-links-active.google %}
   <!--- Share on Google Plus -->
     <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
@@ -36,7 +32,6 @@ l<!-- Check if any share-links are active -->
       <span class="sr-only">Google+</span>
     </a>
   {% endif %}
-
   {% if site.share-links-active.linkedin %}
   <!--- Share on LinkedIn -->
     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}"
@@ -45,7 +40,5 @@ l<!-- Check if any share-links are active -->
       <span class="sr-only">LinkedIn</span>
     </a>
   {% endif %}
-
 </section>
-
 {% endif %}
