@@ -1,73 +1,19 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
-gh-repo: daattali/beautiful-jekyll
+title: Moved site to GitHub
+subtitle: Because I'm tired of GoDaddy
+gh-repo: donaldrelliott.github.io
 gh-badge: [star, fork, follow]
-tags: [test]
+tags: [new site, github, pages]
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
-
-**Here is some bold text**
-
-## Here is a secondary heading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
+Alright, so I decided to _**finally**_ move all of my stuff from GoDaddy hosting over to GitHub pages. At the base price for their service
+I was looking at around $111 a year. That's the lowest tier they have. That's obviously not horrible for an email address, some hosting, and
+a domain for a year, but I felt I could do better.  
+My main complaint with them as a company was the atrocious load times my site would have randomly. I know I don't have tons of people flooding
+my website, but since it generally consists of just basic content, there is no reason for it to take and length of time to load. After playing
+around with GitHub pages for awhile I realized that load times were just faster all around. It was at this time that I decided to go ahead and start building something for my new _**free**_ host.  
+Knowing I was going to lose my custom email by trashing my hosting plan I moved to
+[GSuite](www.gsuite.google.com) for a whopping $5 a month. Not only do I get to keep using my custom domain email, but they also toss in **30GB** of free cloud storage, nice. This way if I need to host some large files to send to someone for downloading, I can still do that, without a dedicated hosting company.  
+Anyways, that's all for now. I'll be posting updates randomly to this site in regards to software I'm working on or maybe something just in 
+my daily life (like hiking or talking about watches). Until then, be safe, and enjoy your day.
