@@ -1,16 +1,13 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About Me
+subtitle: I fell asleep writing this
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hey guys, my name is Rod Elliott, and I'm a front end developer at Rocky Brands, Inc. The main brands I work with are Lehigh Outfitters, Lehigh Safety Shoes, SlipGrips, Shoe Angel, and CustomFit. I graduated from Oregon State University in March of 2018 with a BS in computer science. Before that I worked as a Senior Manager for seven years with GNC in my hometown after graduating from Marshall University in 2009 with a BA in history and psychology.  
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+When I'm not working on applications I'm staying busy with my day job, hiking the hills of West Virginia, and of course having fun raising my son with my wife.  
 
-What else do you need?
+### coming soon  
 
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+My CV and other goodies. Also, stay tuned for a **Projects** page that will be set up in the near future.
