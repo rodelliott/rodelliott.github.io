@@ -1,65 +1,445 @@
----
-layout: page
-title: Rod Elliott
-subtitle: Welcome to my boring site.
-use-site-title: true
----
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}
-    </a>
-    <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-    <div class="post-entry-container">
-      {% if post.image %}
-      <div class="post-image">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <img src="{{ post.image }}">
-        </a>
-      </div>
-      {% endif %}
-      <div class="post-entry">
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rod Elliott</title>
+    <meta name="description" content="Website">
+    <meta name="keywords" content="Website">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="probootstrap-loader"></div>
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="index.html" class="probootstrap-logo"><img src="img/smallSig.png" style="max-width:137px !important;"></a>
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="probootstrap-right-nav hidden-xs">
+              <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i></a></li>
+              <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i></a></li>
+          </ul>
+          <div class="extra-text visible-xs"> 
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Address</h5>
+            <p>Parkersburg, WV 26101</p>
+            <h5>Connect</h5>
+            <ul class="social-buttons">
+              <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i></a></li>
+              <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <section class="probootstrap-slider flexslider">
+    <ul class="slides">
+      <li style="background-image: url(img/siteBG.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="slides-text probootstrap-animate">
+                <h2 style="margin-bottom:0px;">Welcome</h2>
+                <h4 style="margin-top:0px;margin-bottom:20px;">I'm A Web Developer, UI/UX Designer, and Software Engineer.</h4>
+                <p><a href="contact.html" target="_blank" class="btn btn-primary" style="color:#000000!important;">Message Me</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!---
+      <li style="background-image: url(img/slider_2.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="slides-text probootstrap-animate">
+                <h2>Black is elegant.</h2>
+                <p><a href="contact.html" target="_blank" class="btn btn-primary" style="color:#000000!important;">Message Me</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li style="background-image: url(img/slider_3.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="slides-text probootstrap-animate">
+                <h2>Whitespace is clever.</h2>
+                <p><a href="contact.html" target="_blank" class="btn btn-primary" style="color:#000000!important;">Message Me</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>-->
+    </ul>
+  </section>
+  <div class="probootstrap-section">
+    <div class="container">
+      <div class="row" id="resume">
+          <div class="col-md-12 section-heading probootstrap-animate" id="resume">
+              <h2>Resume</h2>
+            </div>
+        <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInLeft">
+          <div class="panel-group probootstrap-panel" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h3 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Education
+                  </a>
+                </h3>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <h3>Oregon State University<span style="font-size:15px;color: rgba(255, 255, 255, 0.6);">, Corvallis, OR</span></h3>
+                  <p>Computer Science</p>
+                  <ul>
+                    <li>GPA: 3.9</li>
+                    <li>Degree: Bachelor of Science</li>
+                    <li>Graduated: April 2018</li>
+                    <li>Courses: C++ Programming I/II, Software Engineering I/II, Discrete Structures, Data Structures, Analysis of Algorithms, Network Engineering, x86 Architecture (MASM), Web Development, Defense Against the Dark Arts (Cybersecurity), Databases, Operating Systems, Usability Engineering, and Capstone Project</li>
+                  </ul>
+                  <h3>Marshall University<span style="font-size:15px;color: rgba(255, 255, 255, 0.6);">, Huntington, WV</span></h3>
+                  <p>History & Psychology</p>
+                  <ul>
+                    <li>Degree: Bachelor of Arts</li>
+                    <li>Graduated: Cum Laude, May 2009</li>
+                    <li>Academic Honors: Phi Alpha Theta & Psi Chi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Work History
+                  </a>
+                </h3>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <h3>Rocky Brands, Inc.<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Nelsonville, OH</span></h3>
+                    <p>Front-End Developer</p>
+                    <ul>
+                      <li>Dates Worked: May 14, 2018 - Current</li>
+                      <li>Websites: <a href="https://www.lehighoutfitters.com">Lehigh Outfitters</a>, <a href="https://www.lehighsafetyshoes.com">Lehigh Safety Shoes</a>, <a href="https://www.customfit.me">Lehigh CustomFit</a>, <a href="https://www.slipgrips.com">SlipGrips</a>, <a href="http://www.shoeangel.com">Shoe Angel</a></li>
+                      <li>Systems Used: SalesForce (Demandware), HubSpot, Zinrelo, and Bazaarvoice</li>
+                      <li>Software Used: Visual Studio Code, Photoshop, Illustrator, Xd, Final Cut Pro, After Effects</li>
+                      <li>Job Goal: Increase e-commerce business by creating easier to navigate websites while also providing an engaging user experience.</li>
+                      <li>Tasks: Manage all coupon codes/promotions across sites, design graphics for all outlets (sites, social media, business events, etc.), code new features/maintain all old applications, develop emails for marketing purposes, shall I go on?</li>
+                      <li>Certifications via HubSpot: Email Marketing, Social Media, and Inbound Marketing</li>
+                      <li>Conferences Attended: Inbound 2018<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);"> (Boston, MA)</span></li>
+                    </ul>
+                    <h3>Oregon State University<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Corvallis, OR</span></h3>
+                    <p>Teaching Assistant</p>
+                    <ul>
+                        <li>Dates Worked: September 2016 - June 2017</li>
+                        <li>Tasks: Graded coursework for C++ Programming I. Programs were run on a RedHat server and compiled with gcc. Memory leaks checked with Valgrind.</li>
+                      </ul>
+                    <h3>General Nutrition Center<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Parkersburg, WV</span></h3>
+                    <p>Senior Store Manager</p>
+                    <ul>
+                        <li>Dates Worked: February 1, 2011 - May 13, 2018</li>
+                        <li>Job Goal: Managed multiple locations within my city. The overall job's goal was to ensure sales growth and positive comps while striving to continually increase margin percentages and profitability.
+                        <li>Tasks: Hire/train/terminate employees, produce monthly work schedules and daily tasks lists, process payroll and commission reports, compile weekly summary reports (sales/returns/deposit information), make store deposits and reconcile with reports, inventory management, social media marketing, and public health outreach.</li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h3 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Certifications
+                    </a>
+                  </h3>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                      <p><span style="color:#ffffff;">HubSpot</span></p>
+                    <ul>
+                      <li>Email Marketing<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/emailMarketingCert.png">View</a></span></li>
+                      <li>Inbound<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/InboundCert.png">View</a></span></li>
+                      <li>Social Media<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/socialMediaCert.png">View</a></span></li>
+                      <li>Sales Software<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/SalesSoftwareCert.png">View</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Languages
+                  </a>
+                </h3>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                  <ul>
+                    <li>HTML (10+ years)</li>
+                    <li>CSS (5+ years)</li>
+                    <li>Python (2+ years)</li>
+                    <li>JavaScript (1 year)</li>
+                    <li>C++ (1 year)</li>
+                    <li>C (1 year)</li>
+                    <li>Swift (< 1 year)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInRight">
+          <figure>
+            <div class="probootstrap-video">
+              <a href="https://www.youtube.com/watch?v=_1IgWHW9YW4" class="popup-vimeo probootstrap-video-play"><i class="icon-play3"></i></a>
+              <img src="img/rdpImage.jpg" alt="" class="img-responsive img-border">
+            </div>
+            <figcaption>RDP/Ransomware Presentation at OSU</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
-    {% if post.tags.size > 0 %}
-    <div class="blog-tags">
-      Tags:
-      {% if site.link-tags %}
-      {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tags#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-      {% else %}
-        {{ post.tags | join: ", " }}
-      {% endif %}
+  </div>
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-heading probootstrap-animate" id="projects">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-card">
+            <div class="probootstrap-card-media">
+              <a href="/NASA/webapp.html"><img src="img/slider_1.jpg" class="img-responsive img-border" alt=""></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">NASA POTD</h2>
+              <p class="category">Web Development</p>
+              <p>This project utilizes the NASA API for Picture of the Day and also the Jet Propulsion Lab. Selecting a date loads the picture of the day and also the nearest ten objects to the Earth on that date asynchronously. Coded with JavaScript, HTML5, and CSS3. I've been meaning to add more to this, but you know, life.</p>
+              <p><a href="/NASA/webapp.html">View Project Site</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://github.com/rodelliott/NASA-POTD">View Source Code</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-card">
+            <div class="probootstrap-card-media">
+              <a href="#"><img src="img/harkenwold.jpg" class="img-responsive img-border" alt=""></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">The Jewel of Harkenwold</h2>
+              <p class="category">Game Development</p>
+              <p>This game was produced for my capstone course at Oregon State with Jeffery Goss and Jared Parkinson. 3D modeling was done within Maya, C# coding within Mono Develop, and world building using Unity 3D. The final version was stripped down as to lighten the download size for course grading. You may download the game below, however you do so at your own risk. I have not tested this game on enough systems to consider it stable.</p>
+              <p><a href="https://www.youtube.com/watch?v=UxM-XoiR2Rk">View on YouTube</a><br />
+              Download <a href="https://drive.google.com/open?id=1Ye_0I5JZqjh_Y6K2Ue0EPAQgQ4VkjPYy">macOS</a>&nbsp;/&nbsp;<a href="https://drive.google.com/open?id=1wechv31NczEKIpXRF6KArRPp-IN8TM5b">Windows</a><br /></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-card">
+            <div class="probootstrap-card-media">
+              <a href="#"><img src="img/tsp.jpg" class="img-responsive img-border" alt=""></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Traveling Salesman Problem</h2>
+              <p class="category">C++/Python</p>
+              <p>Project done in conjunction with Noah Beach and John Carrabino. Goal was to find the most optimal routes for a given amount of coordinates/distances. John utilized the Ant Colony model (Python), Noah worked with Nearest Neighbor (Python), and I tackled it with the Christofides Algorithm utilizing a 2-OPT heuristic model (C++).</p>
+              <p><a href="https://github.com/rodelliott/TSP">View on GitHub</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    {% endif %}
-   </article>
-  {% endfor %}
-</div>
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+  </section>
+  <div class="container">
+    <div class="probootstrap-cta probootstrap-animate">
+      <h2 class="mb20">Random Wallpaper</h2>
+      <p>I can never decide on a wallpaper for my computer or phone, so grabbing a random one keeps me sane. Click the view button below if you want a new background.</p>
+      <p><a target="_blank" class="btn btn-primary" style="color:#000000!important;" href="https://picsum.photos/1920/1080/?random">View</a></p>
+    </div>
+  </div>
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row" id="about">
+        <div class="col-md-4">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon">
+              <i class="icon-book-open"></i>
+            </div>
+            <div class="text">
+              <h3 class="heading">Now Reading</h3>
+              <p><span style="color:#ffffff;">It</span>, Stephen King<br>
+                <span style="color:#ffffff;">App Development with Swift</span>, Apple<br>
+              <span style="color:#ffffff;">Astrophysics for People in a Hurry</span>, Neil deGrasse Tyson</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon">
+              <i class="icon-game-controller"></i>
+            </div>
+            <div class="text">
+              <h3 class="heading">Currently Playing</h3>
+              <p><span style="color:#ffffff;">Farcry 5</span><br>
+              <span style="color:#ffffff;">PUBG</span><br>
+              <span style="color:#ffffff;">Fortnite</span><br>
+              Patiently Awaiting Fallout 76<br>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon">
+              <i class="icon-music2"></i>
+            </div>
+            <div class="text">
+              <h3 class="heading">Listening On Apple Music</h3>
+              <p><span style="color:#ffffff;">Kamikaze</span>, Eminem<br>
+              <span style="color:#ffffff;">Kids See Ghosts</span>, Kids See Ghosts<br>
+              <span style="color:#ffffff;">YSIV</span>, Logic<br>
+              <span style="color:#ffffff;">ye</span>, Kanye West<br>
+              <span style="color:#ffffff;">Swimming</span>, Mac Miller</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="probootstrap-section">
+      <div class="container">
+          <div class="row" id="contact">
+              <div class="col-md-12 section-heading probootstrap-animate">
+                <h2>Send Me A Message</h2>
+              </div>
+            </div>
+        <div class="row">
+          <div class="col-md-8">
+            <form action="https://formspree.io/me@rodelliott.com" method="post" class="probootstrap-form mb60">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="_replyto">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-3 col-md-push-1">
+            <h4>Contact Details</h4>
+            <ul class="with-icon colored">
+              <li><i class="icon-location2"></i> <span>Parkersburg, WV 26101</span></li>
+              <li><i class="icon-mail"></i><span>me@rodelliott.com</span></li>
+              <li><i class="icon-phone2"></i><span>Phone Number Available Upon Request</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>  
+  <footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Quick Facts</h4>
+            <p>When I'm not working on websites I enjoy learning other programming languages, hiking, photography, and spending time with my wife and son.</p>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Site Links</h4>
+            <ul class="stack-link">
+              <li><a href="#">Home</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Useful Links</h4>
+            <ul class="stack-link">
+              <li><a href="https://www.unsplash.com">Unsplash</a></li>
+              <li><a href="https://www.flaticon.com">Flat Icon</a></li>
+              <li><a href="https://www.udemy.com">Udemy</a></li>
+            </ul>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Social</h4>
+            <ul class="stack-link">
+                <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i>&nbsp;Twitter</a></li>
+                <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i>&nbsp;GitHub</a></li>
+                <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i>&nbsp;Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i>&nbsp;LinkedIn</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-12">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2018 <a href="https://www.rodelliott.com/">Rod Elliott</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script>
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+  </script>
+  </body>
+</html>

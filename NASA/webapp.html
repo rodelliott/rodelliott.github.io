@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NASA POTD APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/newStyle.css" />
+    <link rel="stylesheet" href="./css/tomorrow-night.css" />
+<script>
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
+</script>
+<script>
+    if (datefield.type!="date"){
+    jQuery(function($){
+        $('#theDate').datepicker({
+          changeYear: true,
+          dateFormat: 'yy-mm-dd',
+          minDate: '95-09-25',
+          maxDate: '0',
+      })
+    })
+  };
+</script>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/POTD.js"></script>
+    <script src="./js/fullNEO.js"></script>
+    <section class="bg-primary nopadding">
+        <div class="container nopadding">
+            <div class="row nopadding">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <h1 class="cursive" id="apod_title"></h1><br />
+                <img class="fixedH"id="apod_img_id">
+                <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+                <h1 class="cursive" id="main_title">Select Your Date</h1>
+                <hr>
+                Enter An Appropriate Date (September 25, 1995 - Current)<br /><br />
+                <input id="theDate" type="date" min="1995-09-25" max="" style="color:black"><br /><br />
+                <a onclick="getDatePhoto(); getNEO()" class="btn btn-primary btn page-scroll">View Photo</a>
+                <h5 id="errorMessage"></h5>
+            </center>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-primaryNEW nopadding">
+        <div class="container nopadding">
+            <div class="row nopadding">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                  <i class="icon-lg ion-photo wow fadeIn" data-wow-delay=".2s"></i>
+                    <h2 id="hideDescrip" class="margin-top-0 text-primary colorWhite cursive">Photo Description</h2>
+                    <center>
+                    <div style="width:75%">
+                    <h5 class="text-left" id="apod_explanation">
+                    <h5 class="text-left" id="copyright">
+                    <h6 class="text-left" id="apod_hdurl"></h6>
+                    </center>
+                  </div>
+                </div>
+                  <center>
+                  <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h3 id="hideNFO" class="raleway">Closest Asteroids/Comets To Earth On This Date</h3>
+</center>
+</div>
+
+                      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                        <div id="hideTable">
+<center>
+
+    <center>                  <table id="objectName" style="width:75%">
+  <tr>
+    <th class="text-center">Name</th>
+    <th class="text-center">Distance</th>
+  </tr>
+</center>
+</table>
+</center>
+</div>
+</div>
+                </center>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </section>
+<script>
+//Hide the iframe on site load
+$("#apod_vid_id").hide();
+$("#hideImageLink").hide();
+$("#hideDescrip").hide();
+$("#hideNFO").hide();
+$("#hideTable").hide();
+</script>
+  </body>
+  </html>
