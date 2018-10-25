@@ -1950,14 +1950,14 @@ figure:hover figcaption, figure:focus figcaption {
 
 /* Flexslider override style */
 .slider-height, .flexslider, .flexslider2, .flexslider .slides > li, .flexslider2 .slides > li {
-  height: 800px;
+  height: 100%;
   overflow: hidden;
 }
 
 @media screen and (max-width: 480px) {
   .slider-height, .flexslider, .flexslider2, .flexslider .slides > li, .flexslider2 .slides > li {
     height: inherit;
-    height: 500px;
+    height: 100%;
   }
 }
 
