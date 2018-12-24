@@ -1065,7 +1065,8 @@ figure:hover figcaption, figure:focus figcaption {
 
 @media screen and (max-width: 768px) {
   .slides-text {
-    padding-top: 150px;
+    padding-top: 275px;
+    padding-bottom:275px;
   }
 }
 
