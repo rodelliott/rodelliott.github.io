@@ -1,437 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.png" rel="icon" />
     <title>Rod Elliott</title>
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#000000">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#000000">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="Website">
-    <meta name="keywords" content="Website">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-merged.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/lightbox.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
-    <style>
-    .whiteText{color:#fff;}
-    </style>
-    <script data-ad-client="ca-pub-5763385200779854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
-  <body>
-  <div class="probootstrap-loader"></div>
-  <header role="banner" class="probootstrap-header">
-    <div class="container">
-        <a href="index.html" class="probootstrap-logo"><img src="img/smallSig.png" style="max-width:137px !important;"></a>
-        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
-        <div class="mobile-menu-overlay"></div>
-        <nav role="navigation" class="probootstrap-nav hidden-xs">
-          <ul class="probootstrap-main-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <ul class="probootstrap-right-nav hidden-xs">
-              <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i></a></li>
-              <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i></a></li>
-          </ul>
-          <div class="extra-text visible-xs"> 
-            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
-            <h5>Address</h5>
-            <p>Parkersburg, WV 26101</p>
-            <h5>Connect</h5>
-            <ul class="social-buttons">
-              <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i></a></li>
-              <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i></a></li>
-              <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </nav>
-    </div>
-  </header>
-  <section class="probootstrap-slider flexslider">
-    <ul class="slides">
-      <li style="background-image: url(img/bgBackground.jpg);height:100vh;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class="slides-text probootstrap-animate" style="padding-top:300px !important;">
-                <h2 style="margin-bottom:0px;">Welcome</h2>
-                <h4 style="margin-top:0px;margin-bottom:20px;">I'm A Web Developer, UI/UX Designer, and Software Engineer.</h4>
-                <p><a href="#contact" class="btn btn-primary" style="color:#000000!important;">Message Me</a></p>
-              </div>
-            </div>
-          </div>
+    <meta name="description" content="Portfolio Site">
+    <meta name="author" content="Rod Elliott">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link id="color-switcher" type="text/css" rel="stylesheet" href="#" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#header-nav" data-bs-offset="120">
+    <div class="preloader preloader-dark">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-      </li>
-    </ul>
-  </section>
-  <div class="probootstrap-section">
-    <div class="container">
-      <div class="row" id="resume">
-          <div class="col-md-12 section-heading probootstrap-animate" id="resume">
-              <h2>Resume</h2>
-            </div>
-        <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInLeft">
-          <div class="panel-group probootstrap-panel" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h3 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Education
-                  </a>
-                </h3>
-              </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    <h3>Oregon State University<span style="font-size:15px;color: rgba(255, 255, 255, 0.6);">, Corvallis, OR</span></h3>
-                  <p>Computer Science</p>
-                  <ul>
-                    <li>GPA: 3.9</li>
-                    <li>Degree: Bachelor of Science</li>
-                    <li>Graduated: April 2018</li>
-                    <li>Courses: C++ Programming I/II, Software Engineering I/II, Discrete Structures, Data Structures, Analysis of Algorithms, Network Engineering, x86 Architecture (MASM), Web Development, Defense Against the Dark Arts (Cybersecurity), Databases, Operating Systems, Usability Engineering, and Capstone Project</li>
-                  </ul>
-                  <h3>Marshall University<span style="font-size:15px;color: rgba(255, 255, 255, 0.6);">, Huntington, WV</span></h3>
-                  <p>History & Psychology</p>
-                  <ul>
-                    <li>Degree: Bachelor of Arts</li>
-                    <li>Graduated: Cum Laude, May 2009</li>
-                    <li>Academic Honors: Phi Alpha Theta & Psi Chi</li>
-                  </ul>
+    </div>
+    <div id="main-wrapper">
+        <header id="header" class="sticky-top-slide">
+            <nav class="primary-menu navbar navbar-expand-lg navbar-text-light bg-transparent border-bottom-0">
+                <div class="container-fluid position-relative g-lg-4">
+                    <div class="col-auto col-lg-2">
+                        <a class="logo" href="index.html" title="DRE Logo"> <img src="images/reLogoLight.png" alt="Rod Elliott Logo"/> </a>
+                    </div>
+                    <div class="col col-lg-8 navbar-accordion">
+                        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav"><span></span><span></span><span></span></button>
+                        <div id="header-nav" class="collapse navbar-collapse justify-content-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">What I Do</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#resume">Resume</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 d-flex justify-content-end">
+                        <ul class="social-icons social-icons-light">
+                            <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="http://www.twitter.com/rodelliott" target="_blank" title="" data-bs-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="http://www.facebook.com/donaldrelliott" target="_blank" title="" data-bs-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-icons-dribbble"><a data-bs-toggle="tooltip" href="http://www.instagram.com/rodelliott" target="_blank" title="" data-bs-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h3 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Work History
-                  </a>
-                </h3>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                    <h3>Rocky Brands, Inc.<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Nelsonville, OH</span></h3>
-                    <p>Front-End Developer</p>
-                    <ul>
-                      <li>Dates Worked: May 14, 2018 - Current</li>
-                      <li>Websites: <a href="https://www.lehighoutfitters.com">Lehigh Outfitters</a>, <a href="https://www.lehighsafetyshoes.com">Lehigh Safety Shoes</a>, <a href="https://www.customfit.me">Lehigh CustomFit</a>, <a href="https://www.slipgrips.com">SlipGrips</a>, <a href="http://www.shoeangel.com">Shoe Angel</a></li>
-                      <li>Systems Used: SalesForce (Demandware), HubSpot, Zinrelo, and Bazaarvoice</li>
-                      <li>Software Used: Visual Studio Code, Photoshop, Illustrator, Xd, Final Cut Pro, After Effects</li>
-                      <li>Job Goal: Increase e-commerce business by creating easier to navigate websites while also providing an engaging user experience.</li>
-                      <li>Tasks: Manage all coupon codes/promotions across sites, design graphics for all outlets (sites, social media, business events, etc.), code new features/maintain all old applications, develop emails for marketing purposes, shall I go on?</li>
-                      <li>Certifications via HubSpot: Email Marketing, Social Media, and Inbound Marketing</li>
-                      <li>Conferences Attended: Inbound 2018<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);"> (Boston, MA)</span></li>
+            </nav>
+        </header>
+        <div id="content" role="main">
+            <section id="home">
+                <div class="hero-wrap">
+                    <div class="hero-mask opacity-5 bg-dark"></div>
+                    <div class="hero-bg parallax" style="background-image:url('images/intro-bg.jpg');"></div>
+                    <div class="hero-content section d-flex fullscreen">
+                        <div class="container my-auto">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="typed-strings">
+                                        <p>I'm Rod Elliott</p>
+                                        <p>I'm a Web Developer.</p>
+                                        <p>I'm a UI/UX Developer.</p>
+                                        <p>I'm a Watch Collector.</p>
+                                    </div>
+                                    <p class="text-7 fw-500 text-white mb-2 mb-md-3">Welcome</p>
+                                    <h2 class="text-16 fw-600 text-white mb-2 mb-md-3"><span class="typed"></span></h2>
+                                    <p class="text-5 text-light mb-4">based in Parkersburg, West Virginia.</p>
+                                    <a href="#contact" class="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2">Contact Me</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fa fa-chevron-down"></i></span></a> </div>
+                </div>
+            </section>
+            <section id="about" class="section bg-dark-1">
+                <div class="container">
+                    <div class="position-relative d-flex text-center mb-5">
+                        <h2 class="text-24 text-muted opacity-1 text-uppercase fw-600 w-100 mb-0">About Me</h2>
+                        <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0">Get To Know Me<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+                    </div>
+                    <div class="row gy-5">
+                        <div class="col-lg-7 col-xl-8 text-center text-lg-start">
+                            <h2 class="text-7 text-white fw-600 mb-3">I'm <span class="text-primary">Rod Elliott,</span> a Web Developer at Rocky Brands</h2>
+                            <p class="text-white-50">You made it to my site, congratulations! I'll go ahead and assume you know I work as a web developer and stay up on current trends as much as possible. When I'm not working on my daily tasks I like to learn new (for me) web development frameworks. I'm currently taking a few courses to learn React and React Native.</p>
+                            <p class="text-white-50">Outside of work I enjoy spending time with my family and going for hikes, flying my drone and collecting watches. I've been challenging myself to take at least one good photo a day to better understand composition. Hopefully in some way this will translate over to the designing I do for work in the future.</p>
+                        </div>
+                        <div class="col-lg-5 col-xl-4">
+                            <div class="ps-lg-4">
+                                <ul class="list-style-2 list-style-light text-light">
+                                    <li><span class="fw-600 me-2">Name:</span>Rod Elliott</li>
+                                    <li><span class="fw-600 me-2">Email:</span><a href="mailto:me@rodelliott.com">me@rodelliott.com</a></li>
+                                    <li><span class="fw-600 me-2">Age:</span>34</li>
+                                    <li class="border-0"><span class="fw-600 me-2">From:</span>Parkersburg, West Virginia</li>
+                                </ul>
+                                <a href="ElliottDonaldR_Resume.pdf" class="btn btn-primary rounded-pill">Download CV</a> </div>
+                        </div>
+                    </div>
+                    <div class="brands-grid separator-border separator-border-light mt-5">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <div class="featured-box text-center">
+                                    <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0" data-to="10">10</span>+</h4>
+                                    <p class="text-light mb-0">Years HTML/CSS<br>Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="featured-box text-center">
+                                    <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0" data-to="5">5</span></h4>
+                                    <p class="text-light mb-0">E-Commerce<br>Brands</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="featured-box text-center">
+                                    <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0" data-to="4">4</span></h4>
+                                    <p class="text-light mb-0">HubSpot<br>Certifications</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="featured-box text-center">
+                                    <h4 class="text-12 text-white-50 mb-0"><span class="counter" data-from="0" data-to="2">2</span></h4>
+                                    <p class="text-light mb-0">Company<br>Awards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="section bg-dark-2">
+                <div class="container">
+                    <div class="position-relative d-flex text-center mb-5">
+                        <h2 class="text-24 text-white-50 opacity-1 text-uppercase fw-600 w-100 mb-0">Services</h2>
+                        <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0">What I Do?<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-11 mx-auto">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="featured-box style-3 mb-5">
+                                        <div class="featured-box-icon text-primary bg-dark-1 shadow-sm rounded"><i class="fas fa-desktop"></i> </div>
+                                        <h3 class="text-white">Web Development</h3>
+                                        <p class="text-white-50 mb-0">Work within Salesforce Commerce Cloud and DreamingCode to develop new assets/integrations for the retail division of Rocky Brands. Languages utilized in this role are HTML, CSS, JavaScript, Python and SQL.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-box style-3 mb-5">
+                                        <div class="featured-box-icon text-primary bg-dark-1 shadow-sm rounded"><i class="fas fa-pencil-ruler"></i></div>
+                                        <h3 class="text-white">UI/UX Development</h3>
+                                        <p class="text-white-50 mb-0">Mock up new designs for email and web with Adobe Photoshop and XD. I keep best practices in mind in order to comply with ADA standards and boost SEO rankings while ensuring low-impact to performance.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-box style-3 mb-5 mb-md-0">
+                                        <div class="featured-box-icon text-primary bg-dark-1 shadow-sm rounded"><i class="fas fa-chart-area"></i> </div>
+                                        <h3 class="text-white">Google Analytics</h3>
+                                        <p class="text-white-50 mb-0">Track site performance metrics like landing page views, conversion rates, user engagement, traffic acquisition, user demographics and more.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-box style-3 mb-0">
+                                        <div class="featured-box-icon text-primary bg-dark-1 shadow-sm rounded"><i class="fas fa-bullhorn"></i> </div>
+                                        <h3 class="text-white">Email Marketing</h3>
+                                        <p class="text-white-50 mb-0">Design/code email within HubSpot for multiple brands and track open rates, click-throughs and curate include/exclude lists. I also handle all form entries and integrations between HubSpot and other platforms.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="resume" class="section bg-dark-1">
+                <div class="container">
+                    <div class="position-relative d-flex text-center mb-5">
+                        <h2 class="text-20 text-muted opacity-1 text-uppercase fw-600 w-100 mb-0">WORK &amp; EDUCATION</h2>
+                        <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0">Resume<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+                            <h2 class="text-6 text-white fw-600 mb-4">My Education</h2>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2016 - 2018</p>
+                                <h3 class="text-5 text-white">B.S. in Computer Science</h3>
+                                <p class="text-primary">Oregon State University</p>
+                                <p class="text-white-50 mb-0">Graduated with a 3.9 GPA.<br>Courses taken included C++ Programming I/II, Software Engineering I/II, Discrete Structures, Data Structures, Analysis of Algorithms, Network Engineering, x86 Architecture (MASM), Web Development, Defense Against the Dark Arts (Cybersecurity), Databases, Operating Systems, Usability Engineering and a Capstone Project (3D open world game built in Unity).
+                                </p>
+                            </div>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2005 - 2009</p>
+                                <h3 class="text-5 text-white">B.A. in History &amp; Psychology</h3>
+                                <p class="text-primary">Marshall University</p>
+                                <p class="text-white-50 mb-0">Graduated cum laude.<br>Inducted into Phi Alpha Theta (History) &amp; Psi Chi (Psychology) for academic honors.</p>
+                            </div>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2021</p>
+                                <h3 class="text-5 text-white">Google UX Design Certificate</h3>
+                                <p class="text-primary">Google</p>
+                                <p class="text-white-50 mb-0">Completed 7 modules within the curriculum.<br>Foundations of UX Design, Start the UX Design Process, Build Wireframes &amp; Low-Fidelity Prototypes, Conduct UX Research and Test Early Concepts, Create High-Fidelity Designs and Prototypes in Figma, Responsive Web Design in Adobe XD and Design for Social Good</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="text-6 text-white fw-600 mb-4">My Experience</h2>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2018 - Current</p>
+                                <h3 class="text-5 text-white">Front-End Developer</h3>
+                                <p class="text-primary">Rocky Brands</p>
+                                <p class="text-white-50 mb-0">Handle all web development for five brands (Lehigh Safety Shoes, Lehigh Outfitters, Lehigh CustomFit, SlipGrips and Shoe Angel). Our B2C brands run on Salesforce Commerce Cloud and B2B brands through DreamingCode. In addition to all development tasks I also take care of our loyalty programs, all promotions/codes, graphic design work for web/email and execute all email marketing through HubSpot as well as curating the include/exclude lists.</p>
+                            </div>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2016 - 2017</p>
+                                <h3 class="text-5 text-white">Teaching Assistant</h3>
+                                <p class="text-primary">Oregon State University</p>
+                                <p class="text-white-50 mb-0">Graded coursework for C++ Programming I. Programs were run on a RedHat server and compiled with gcc. Memory leaks checked with Valgrind.</p>
+                            </div>
+                            <div class="bg-dark rounded p-4 mb-4">
+                                <p class="badge bg-danger text-2 fw-400">2011 - 208</p>
+                                <h3 class="text-5 text-white">Senior Store Manager</h3>
+                                <p class="text-primary">General Nutrition Center</p>
+                                <p class="text-white-50 mb-0">Managed multiple locations in which the goal was to ensure sales growth and positive comps. Some responsibilities included producing monthly work schedules and daily tasks lists, process payroll and commission reports, compile weekly summary reports, inventory management, social media marketing and public health outreach.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-6 text-white fw-600 mt-4 mb-4">My Skills</h2>
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+                            <p class="text-light fw-500 text-start mb-2">HTML/CSS <span class="float-end">95%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="text-light fw-500 text-start mb-2">Bootstrap <span class="float-end">95%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="text-light fw-500 text-start mb-2">Web Design <span class="float-end">85%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-light fw-500 text-start mb-2">Email Marketing <span class="float-end">90%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="text-light fw-500 text-start mb-2">UI/UX Design <span class="float-end">75%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="text-light fw-500 text-start mb-2">JavaScript <span class="float-end">70%</span></p>
+                            <div class="progress progress-sm bg-dark mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                    </div>
+                    <div class="text-center mt-5"><a href="ElliottDonaldR_Resume.pdf" class="btn btn-outline-secondary rounded-pill shadow-none">Download CV <span class="ms-1"><i class="fas fa-download"></i></span></a></div>
+                </div>
+            </section>
+            <section id="portfolio" class="section bg-dark-2">
+                <div class="container">
+                    <div class="position-relative d-flex text-center mb-5">
+                        <h2 class="text-24 text-white-50 opacity-1 text-uppercase fw-600 w-100 mb-0">Photos</h2>
+                        <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0">Some Quick Snaps<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+                    </div>
+                    <ul class="portfolio-menu nav nav-tabs nav-light justify-content-center border-bottom-0 mb-5">
+                        <li class="nav-item"> <a data-filter="*" class="nav-link active" href="">All</a></li>
+                        <li class="nav-item"> <a data-filter=".people" href="" class="nav-link">People</a></li>
+                        <li class="nav-item"> <a data-filter=".watches" href="" class="nav-link">Watches</a></li>
+                        <li class="nav-item"> <a data-filter=".wildlife" href="" class="nav-link">Wildlife</a></li>
                     </ul>
-                    <h3>Oregon State University<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Corvallis, OR</span></h3>
-                    <p>Teaching Assistant</p>
-                    <ul>
-                        <li>Dates Worked: September 2016 - June 2017</li>
-                        <li>Tasks: Graded coursework for C++ Programming I. Programs were run on a RedHat server and compiled with gcc. Memory leaks checked with Valgrind.</li>
-                      </ul>
-                    <h3>General Nutrition Center<span style="font-size:15px;color: rgba(255, 255, 255, 0.65);">, Parkersburg, WV</span></h3>
-                    <p>Senior Store Manager</p>
-                    <ul>
-                        <li>Dates Worked: February 1, 2011 - May 13, 2018</li>
-                        <li>Job Goal: Managed multiple locations within my city. The overall job's goal was to ensure sales growth and positive comps while striving to continually increase margin percentages and profitability.
-                        <li>Tasks: Hire/train/terminate employees, produce monthly work schedules and daily tasks lists, process payroll and commission reports, compile weekly summary reports (sales/returns/deposit information), make store deposits and reconcile with reports, inventory management, social media marketing, and public health outreach.</li>
-                      </ul>
+                    <div class="portfolio popup-ajax-gallery">
+                        <div class="row portfolio-filter g-4">
+                            <div class="col-sm-6 col-lg-4 wildlife">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/droneTrees.jpg" alt="Trees From Drone">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Views From Backyard</h5>
+                                                <span class="text-light">Drone Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 watches">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/sinn104.jpg" alt="Sinn 104">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Sinn 104</h5>
+                                                <span class="text-light">Watch Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 people">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/harperPortrait.jpg" alt="Harper Picking Apple">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Harper Grace</h5>
+                                                <span class="text-light">Portrait Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 watches">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/tudorLandscape.jpg" alt="Tudor Wide Shot">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Tudor Heritage Black Bay</h5>
+                                                <span class="text-light">Watch Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 watches">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/tudorPortrait.jpg" alt="Tudor Portrait">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Tudor Heritage Black Bay</h5>
+                                                <span class="text-light">Watch Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 wildlife">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/seagull.jpg" alt="Seagull">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Laughing Gull</h5>
+                                                <span class="text-light">Wildlife Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 watches">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/sinn104side.jpg" alt="Seagull">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Sinn 104</h5>
+                                                <span class="text-light">Watch Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 people">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/harperSlide.jpg" alt="Seagull">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Harper Slide Fun</h5>
+                                                <span class="text-light">Portrait Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 wildlife">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/frog.jpg" alt="Frog Pic">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">American Toad</h5>
+                                                <span class="text-light">Wildlife Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 watches">
+                                <div class="portfolio-box rounded">
+                                    <div class="portfolio-img rounded"> <img class="img-fluid d-block" src="images/projects/calibre8800.jpg" alt="Calibre 8800">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-overlay-details">
+                                                <h5 class="text-white fw-400">Omega Seamaster 300m</h5>
+                                                <span class="text-light">Watch Photography</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h3 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Certifications
-                    </a>
-                  </h3>
+            </section>
+            <section id="contact" class="section bg-dark-1">
+                <div class="container">
+                    <div class="position-relative d-flex text-center mb-5">
+                        <h2 class="text-24 text-white-50 opacity-1 text-uppercase fw-600 w-100 mb-0">Contact</h2>
+                        <p class="text-9 text-white fw-600 position-absolute w-100 align-self-center lh-base mb-0">Get In Touch<span class="heading-separator-line border-bottom border-3 border-primary d-block mx-auto"></span> </p>
+                    </div>
+                    <div class="row gy-5">
+                        <div class="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
+                            <h2 class="mb-3 text-5 text-white text-uppercase">Address</h2>
+                            <p class="text-3 text-light mb-4">Parkersburg WV 26104 </p>
+                            <p class="text-3 text-light mb-1"><span class="text-primary text-4 me-2"><i class="fas fa-phone"></i></span>Available Upon Request</p>
+                            <p class="text-3 text-light mb-4"><span class="text-primary text-4 me-2"><i class="fas fa-envelope"></i></span>me@rodelliott.com</p>
+                            <h2 class="mb-3 text-5 text-white text-uppercase">Follow Me</h2>
+                            <ul class="social-icons social-icons-muted justify-content-center justify-content-md-start">
+                                <li class="social-icons-twitter"><a data-bs-toggle="tooltip" href="https://twitter.com/rodelliott" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li class="social-icons-facebook"><a data-bs-toggle="tooltip" href="http://www.facebook.com/donaldrelliott" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-icons-instagram"><a data-bs-toggle="tooltip" href="http://www.instagram.com/rodelliott" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li class="social-icons-github"><a data-bs-toggle="tooltip" href="http://www.github.com/rodelliott" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8 col-xl-9 order-0 order-md-1">
+                            <h2 class="mb-3 text-5 text-white text-uppercase text-center text-md-start">Send me a message</h2>
+                            <form id="contact-form" class="form-dark" action="https://formspree.io/me@rodelliott.com" method="post">
+                                <div class="row g-4">
+                                    <div class="col-xl-6">
+                                        <input name="name" type="text" class="form-control" required placeholder="Name">
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <input name="email" type="email" class="form-control" required placeholder="Email">
+                                    </div>
+                                    <div class="col">
+                                        <textarea name="form-message" class="form-control" rows="5" required placeholder="Comments"></textarea>
+                                    </div>
+                                </div>
+                                <p class="text-center mt-4 mb-0">
+                                    <button id="submit-btn" class="btn btn-primary rounded-pill d-inline-flex" type="submit">Send Message</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="panel-body">
-                      <p><span style="color:#ffffff;">HubSpot</span></p>
-                    <ul>
-                      <li>Email Marketing<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/emailMarketingCert.png">View</a></span></li>
-                      <li>Inbound<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/InboundCert.png">View</a></span></li>
-                      <li>Social Media<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/socialMediaCert.png">View</a></span></li>
-                      <li>Sales Software<span>&nbsp;&nbsp;<a data-toggle="lightbox" href="img/SalesSoftwareCert.png">View</a></span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingFour">
-                <h3 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Languages
-                  </a>
-                </h3>
-              </div>
-              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                <div class="panel-body">
-                  <ul>
-                    <li>HTML (10+ years)</li>
-                    <li>CSS (5+ years)</li>
-                    <li>Python (2+ years)</li>
-                    <li>JavaScript (1 year)</li>
-                    <li>C++ (1 year)</li>
-                    <li>C (1 year)</li>
-                    <li>Swift (< 1 year)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+            </section>
         </div>
-        <div class="col-md-6 probootstrap-animate" data-animate-effect="fadeInRight">
-          <figure>
-            <div class="probootstrap-video">
-              <a href="https://www.youtube.com/watch?v=_1IgWHW9YW4" class="popup-vimeo probootstrap-video-play"><i class="icon-play3"></i></a>
-              <img src="img/rdpImage.jpg" alt="" class="img-responsive img-border">
+        <footer id="footer" class="section footer-text-light bg-dark-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center text-lg-start">
+                        <p class="mb-3 mb-lg-0">Copyright &copy; 2021 <a href="#" class="fw-500">Rod Elliott</a>. All Rights Reserved.</p>
+                    </div>
+                </div>
             </div>
-            <figcaption>RDP/Ransomware Presentation at OSU</figcaption>
-          </figure>
-        </div>
-      </div>
+        </footer>
     </div>
-  </div>
-  <section class="probootstrap-section" style="padding-top:0px!important;padding-bottom:0px!important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 section-heading probootstrap-animate" id="projects">
-          <h2>Projects</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-card">
-            <div class="probootstrap-card-media">
-              <a href="/NASA/webapp.html"><img src="img/slider_1.jpg" class="img-responsive img-border" alt=""></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading mb0">NASA POTD</h2>
-              <p class="category">Web Development</p>
-              <p>This project utilizes the NASA API for Picture of the Day and also the Jet Propulsion Lab. Selecting a date loads the picture of the day and also the nearest ten objects to the Earth on that date asynchronously. Coded with JavaScript, HTML5, and CSS3. I've been meaning to add more to this, but you know, life.</p>
-              <p><a href="/NASA/webapp.html">View Project Site</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://github.com/rodelliott/NASA-POTD">View Source Code</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-card">
-            <div class="probootstrap-card-media">
-              <a href="#"><img src="img/harkenwold.jpg" class="img-responsive img-border" alt=""></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading mb0">The Jewel of Harkenwold</h2>
-              <p class="category">Game Development</p>
-              <p>This game was produced for my capstone course at Oregon State with Jeffery Goss and Jared Parkinson. 3D modeling was done within Maya, C# coding within Mono Develop, and world building using Unity 3D. The final version was stripped down as to lighten the download size for course grading. You may download the game below, however you do so at your own risk. I have not tested this game on enough systems to consider it stable.</p>
-              <p><a href="https://www.youtube.com/watch?v=UxM-XoiR2Rk">View on YouTube</a><br />
-              Download <a href="https://drive.google.com/open?id=1Ye_0I5JZqjh_Y6K2Ue0EPAQgQ4VkjPYy">macOS</a>&nbsp;/&nbsp;<a href="https://drive.google.com/open?id=1wechv31NczEKIpXRF6KArRPp-IN8TM5b">Windows</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 probootstrap-animate">
-          <div class="probootstrap-card">
-            <div class="probootstrap-card-media">
-              <a href="#"><img src="img/tsp.jpg" class="img-responsive img-border" alt=""></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading mb0">Traveling Salesman Problem</h2>
-              <p class="category">C++/Python</p>
-              <p>Project done in conjunction with Noah Beach and John Carrabino. Goal was to find the most optimal routes for a given amount of coordinates/distances. John utilized the Ant Colony model (Python), Noah worked with Nearest Neighbor (Python), and I tackled it with the Christofides Algorithm utilizing a 2-OPT heuristic model (C++).</p>
-              <p><a href="https://github.com/rodelliott/TSP">View on GitHub</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="probootstrap-section" style="padding-top:0px!important;padding-bottom:0px!important;">
-    <div class="container"style="border-top:2px solid rgba(255, 255, 255, 0.1)!important;padding-top:50px !important;">
-      <h2 class="mb20">Interests</h2>
-      <div class="row" id="about">
-        <div class="col-md-4">
-          <div class="service left-icon probootstrap-animate">
-            <div class="icon">
-              <i class="icon-book-open"></i>
-            </div>
-            <div class="text">
-              <h3 class="heading" style="color:#00feff !important;">Now Reading</h3>
-              <p style="font-size:14px !important;"><span class="whiteText">The Stand</span>, Stephen King<br>
-                <span class="whiteText">Ghost In The Wires</span>, Kevin Mitnick<br>
-              <span class="whiteText">Astrophysics for People in a Hurry</span>, Neil deGrasse Tyson</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service left-icon probootstrap-animate">
-            <div class="icon">
-              <i class="icon-game-controller"></i>
-            </div>
-            <div class="text">
-              <h3 class="heading" style="color:#00feff !important;">Currently Playing</h3>
-              <span class="whiteText">Luigi's Mansion 3</span><br>
-              <span class="whiteText">Shadow of The Tomb Raider</span><br>
-              <span class="whiteText">Fallout 76</span><br>
-              <span class="whiteText">Call Of Duty: Cold War</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service left-icon probootstrap-animate">
-            <div class="icon">
-              <i class="icon-music2"></i>
-            </div>
-            <div class="text">
-              <h3 class="heading" style="color:#00feff !important;">Listening On Apple Music</h3>
-              <p style="font-size:14px !important;">
-              <span class="whiteText">Clouds</span>, NF<br>
-              <span class="whiteText">Music To Be Murdered By</span>, Eminem<br>
-              <span class="whiteText">Man On The Moon III</span>, Kid Cudi<br>
-              <span class="whiteText">Starting Over</span>, Chris Stapleton<br>
-              <span class="whiteText">Strange Trails</span>, Lord Huron<br>
-              <span class="whiteText">His Glory Alone</span>, KB</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="container">
-    <div class="probootstrap-cta probootstrap-animate">
-      <h2 class="mb20">Random Wallpaper</h2>
-      <p>I can never decide on a wallpaper for my computer or phone, so grabbing a random one keeps me sane. Click the view button below if you want a new background.</p>
-      <p><a target="_blank" class="btn btn-primary" style="color:#000000!important;" href="https://picsum.photos/1920/1080/?random">View</a></p>
-    </div>
-  </div>
-  <section class="probootstrap-section">
-      <div class="container">
-          <div class="row" id="contact">
-              <div class="col-md-12 section-heading probootstrap-animate">
-                <h2>Send Me A Message</h2>
-              </div>
-            </div>
-        <div class="row">
-          <div class="col-md-8">
-            <form action="https://formspree.io/me@rodelliott.com" method="post" class="probootstrap-form mb60">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="fname">First Name</label>
-                    <input type="text" class="form-control" id="fname" name="fname">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="lname">Last Name</label>
-                    <input type="text" class="form-control" id="lname" name="lname">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="_replyto">
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary" id="submit" name="submit" style="color:#000000!important;" value="Send Message">
-              </div>
-            </form>
-          </div>
-          <div class="col-md-3 col-md-push-1">
-            <h4>Contact Details</h4>
-            <ul class="with-icon colored">
-              <li><i class="icon-location2"></i> <span>Parkersburg, WV 26101</span></li>
-              <li><i class="icon-mail"></i><span>me@rodelliott.com</span></li>
-              <li><i class="icon-phone2"></i><span>Phone Number Available Upon Request</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>  
-  <footer class="probootstrap-footer probootstrap-bg">
-    <div class="container">
-      <div class="row mb60">
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget">
-            <h4 class="heading">Quick Facts</h4>
-            <p>When I'm not working on websites I enjoy learning other programming languages, hiking, photography, and spending time with my wife and son.</p>
-          </div> 
-        </div>
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget probootstrap-link-wrap">
-            <h4 class="heading">Site Links</h4>
-            <ul class="stack-link">
-              <li><a href="#">Home</a></li>
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget">
-            <h4 class="heading">Useful Links</h4>
-            <ul class="stack-link">
-              <li><a href="https://www.unsplash.com">Unsplash</a></li>
-              <li><a href="https://www.flaticon.com">Flat Icon</a></li>
-              <li><a href="https://www.udemy.com">Udemy</a></li>
-            </ul>
-          </div> 
-        </div>
-        <div class="col-md-3">
-          <div class="probootstrap-footer-widget probootstrap-link-wrap">
-            <h4 class="heading">Social</h4>
-            <ul class="stack-link">
-                <li><a href="https://www.twitter.com/rodelliott"><i class="icon-twitter"></i>&nbsp;Twitter</a></li>
-                <li><a href="https://www.github.com/rodelliott"><i class="icon-github"></i>&nbsp;GitHub</a></li>
-                <li><a href="https://www.instagram.com/rodelliott"><i class="icon-instagram2"></i>&nbsp;Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/elliotdo"><i class="icon-linkedin"></i>&nbsp;LinkedIn</a></li>
-                <li><a href="https://www.facebook.com/donaldrelliott/"><i class="icon-facebook"></i>&nbsp;Facebook</a></li>
-              </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row copyright">
-        <div class="col-md-12">
-          <div class="probootstrap-footer-widget">
-            <p>&copy; 2020 <a href="https://www.rodelliott.com/">Rod Elliott</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
-  </div>
-  <script src="js/scripts.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script>
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-  </script>
-  </body>
+    <a id="back-to-top" class="rounded-circle" data-bs-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/jquery.countTo/jquery.countTo.min.js"></script>
+    <script src="vendor/parallaxie/parallaxie.min.js"></script>
+    <script src="vendor/typed/typed.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/switcher.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
 </html>
