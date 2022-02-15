@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top Rated Products</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="128x128" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .scraperAside{display:block;font-size:0.85rem;font-style:italic;background-color:#d6d6d6;padding:15px;margin-top:5px;}
+        .scraperH1{font-size:1.5rem;text-transform:uppercase;border-bottom:2px solid;margin-top:10px;}
+        .scraperInput{padding-left:5px;border-width:1px;border-top:none;border-right:none;border-left:none;border-bottom: 2px solid #d6d6d6;height:35px;min-width:30%;}
+        .scraperBTN{background:#000;border:1px solid #000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;margin-left:0px;}
+        .scraperBTN:hover{color:#000;background:#fff;}
+        .clearBTN{background:#000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;border:1px solid #000;}
+        .clearBTN:hover{background:#fff;border: 1px solid #000;color:#000;}
+        .resultsAside{display:block;font-size:1rem;background-color:#f1f1f1;padding:15px;margin-top:5px;border:1px solid #000;min-height: 90px;}
+        .marginTop{margin-top:15px;}
+        .centerTheText{text-align:center;}
+        .noMargin{margin: 0 auto;}
+        .resultsBlock{text-transform: uppercase;font-size: 0.8rem;border-bottom: 1px solid;}
+        .itemsFound{display:block;font-size:0.9rem;margin-top:5px;}
+        .dropdownSelect{display: block;margin-bottom:10px;font-size:0.85rem;min-height:35px;}
+        .blackBar{background:#000;color:#fff;font-size:0.7rem;text-align:center;padding:5px;}
+        .bottomMargin{margin-bottom:50px;}
+        #eachItemFound{word-break:break-all;}
+    </style>
+</head>
+<body>
+    <div class="row blackBar ml-0 mr-0">
+        <p class="noMargin">The below apps may take a few extra seconds to work if ran after a 30 minute inactive period as it wakes up an external server to process the information.</p>
+    </div>
+    <div class="row ml-0 mr-0">
+        <div class="col-md-6 offset-md-3 col-10 offset-1">
+            <img class="marginTop" src="images/RockyBrands.png" style="margin-bottom:15px;display:block;">
+            <a href="index.html" alt="Go Back To Portal" style="color:#8a1913;">Go Back To Portal</a>
+            <h1 class="scraperH1">Top Rated Scraper</h1>
+            <p>To get a list of SKUs select your site below and hit submit.
+                <span class="scraperAside">The list populated only includes styles listed as active in Bazaarvoice <b>(potentially not active on Salesforce)</b>, have 3 or more reviews, an overall average rating of 4.75 or greater and reviews that were submitted from the specific site.</span>
+            </p>
+            <form>
+                <select size="1" id="siteSelection" class="dropdownSelect">
+                    <option value=""> - Select Site - </option>
+                    <option value="RB">Rocky Boots</option>
+                    <option value="GB">Georgia Boot</option>
+                    <option value="DB">Durango Boots</option>
+                    <option value="LO">Lehigh Outfitters</option>
+                    <option value="LSS">Lehigh Safety Shoes</option>
+                    <option value="SG">SlipGrips</option>
+                    <option value="MB">Muck Boot</option>
+                    <option value="XT">Xtratuf</option>
+                </select>
+                <button type="button" class="scraperBTN" value='send' id="submit" onclick="getStyles()">Submit</button>
+                <button type="button" class="clearBTN" value='send' id="submit" onclick="clearResults()">Clear Results</button>
+            </form>
+        </div>
+    </div>
+    <div class="row marginTop fullResults ml-0 mr-0">
+        <div class="col-md-6 offset-md-3 col-10 offset-1">
+            <div class="centerTheText">
+                <p class="resultsAside">
+                    <span class="noMargin resultsBlock">Results</span>
+                    <span class="itemsFound" id="totalItemsFound"></span>
+                    <span class="itemsFound" id="eachItemFound"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+    function getStyles() {
+
+        let selectElement = document.querySelector('#siteSelection');   
+        let siteOutput = selectElement.value;
+        let correctResponse = 0;
+        var buildURL;
+        while (correctResponse != 1) {
+            if (siteOutput === "RB"){
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=llmbkmz0zqxdtpx3ce9p4kg5u&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=200&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "GB") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=e90apqwx7bm91itvzpqh109pe&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "DB") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=opn93zanr30rwqrrsv1bls9fd&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:4";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LO") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=cawXQPLHHJYdmT0KkBCc4sWPNdyihi515T8vC0I7Topns&Filter=AverageOverallRating:gte:4.5&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LSS") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=caVE4jKnqcrjlWC5llIMvGLHzjpzW3j0PpGQCsykAH0DU&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "SG") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=cafBqrfGXeqmLyxXIM63bble3O3vZcYcQhRu3tEd1Sx68&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "MB") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=caSzWVhygcmWQEbESB5jM8gjugILASh7y2nRnfe8xFdg4&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "XT") {
+                buildURL = "https://api.bazaarvoice.com/data/products.json?apiversion=5.4&passkey=caGL0HusAqgQlFRC1wrsHs7nIpbxilwyr6eReD1TAxUcA&Filter=AverageOverallRating:gte:4.75&IsActive&limit=100&offset=0&Filter=TotalReviewCount:gte:3";
+                correctResponse = 1;
+            }
+            else {
+                console.log("We shouldn't have this showing");
+            }
+        }
+        
+        // Set up vars to be used
+        var responseArr = [];
+        var secondaryArr = [];
+        var styleNums = [];
+        var styleIds = [];
+        var fullText = [];
+        var secondaryText = [];
+        var offsetText = "offset=";
+        var offsetNum = 0;
+        var totalResults;
+        var pagesNeeded;
+        var iter;
+        // Need to request initially to calculate how many offsets
+        var getInfo = $.get(buildURL, function(response) {
+        fullText = JSON.parse(getInfo.responseText);
+        //console.log(fullText);
+        // Store how many results we get
+        totalResults = fullText.TotalResults;
+        //console.log(totalResults);
+        // Round up to get the full number of pages we need
+        pagesNeeded = Math.ceil(totalResults / 100);
+        //console.log(pagesNeeded);
+        var maxArraySize = pagesNeeded * 100;
+        for (iter=0;iter<maxArraySize;iter++) {
+            secondaryArr[iter] = fullText.Results[iter];
+            //console.log(secondaryArr[iter].Id);
+            styleIds[iter] = secondaryArr[iter].Id;
+            document.getElementById("eachItemFound").innerHTML = (styleIds + ",").slice(0,-1);
+            }
+        });
+}
+    function clearResults() {
+        document.getElementById("totalItemsFound").innerHTML = '';
+        document.getElementById("eachItemFound").innerHTML = '';
+    }
+    </script>
+</body>
+</html>

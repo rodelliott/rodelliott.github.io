@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rocky Brands Dev Apps</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="128x128" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .scraperAside{display:block;font-size:0.85rem;font-style:italic;background-color:#d6d6d6;padding:15px;margin-top:5px;}
+        .scraperH1{font-size:1.5rem;text-transform:uppercase;margin-top:10px;margin-bottom:0px;}
+        .scraperInput{padding-left:5px;border-width:1px;border-top:none;border-right:none;border-left:none;border-bottom: 2px solid #d6d6d6;height:35px;min-width:30%;}
+        .scraperBTN{background:#000;border:1px solid #000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;margin-left:15px;}
+        .scraperBTN:hover{color:#000;background:#fff;}
+        .clearBTN{background:#000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;border:1px solid #000;}
+        .clearBTN:hover{background:#fff;border: 1px solid #000;color:#000;}
+        .resultsAside{display:block;font-size:1rem;background-color:#f1f1f1;padding:15px;margin-top:5px;border:1px solid #000;min-height: 90px;}
+        .marginTop{margin-top:15px;}
+        .centerTheText{text-align:center;}
+        .noMargin{margin: 0 auto;}
+        .resultsBlock{text-transform: uppercase;font-size: 0.8rem;border-bottom: 1px solid;}
+        .itemsFound{display:block;font-size:0.9rem;margin-top:5px;}
+        .dropdownSelect{display: block;margin-bottom:10px;font-size:0.85rem;min-height:35px;}
+        .blackBar{background:#000;color:#fff;font-size:0.7rem;text-align:center;padding:5px;}
+        .bottomMargin{margin-bottom:50px;}
+        #eachItemFound{word-break:break-all;}
+        .scraperButton{
+            color:#000;
+            background-color:#fff;
+            border: 1px solid #000;
+            padding: 10px 25px 10px 25px;
+            text-decoration: none;
+        }
+        .scraperButton:hover{
+            color:#fff;
+            background-color:#000;
+            border: 1px solid #000;
+            padding: 10px 25px 10px 25px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>  
+<div class="row blackBar ml-0 mr-0">
+    <p class="noMargin">The below apps may take a few extra seconds to work if ran after a 30 minute inactive period as it wakes up an external server to process the information.</p>
+</div>
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+        <img class="marginTop" src="images/RockyBrands.png" style="margin:0 auto;margin-bottom:1rem;margin-top:1rem;display: block;">
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+<div class="row" style="margin-bottom:2rem;">
+    <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <div class="card text-center">
+                <div class="card-header text-muted">
+                    Last updated: 2/14/22
+                </div>
+            <div class="card-body">
+              <h5 class="card-title">Search/Page SKU Scraper</h5>
+              <p class="card-text">Get a list of SKUs from a site base URL or search term.</p>
+              <a href="scraper.html" class="btn btn-danger">Get Your Styles</a>
+            </div>
+            <div class="card-footer text-muted">
+              Dev Notes: Search term scraper won't work if your site has a redirect on the terms. It is meant for curating styles from the generic search landing pages.
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card text-center">
+                <div class="card-header text-muted">
+                    Last updated: 2/15/22
+                </div>
+            <div class="card-body">
+              <h5 class="card-title">Top Rated Styles</h5>
+              <p class="card-text">Get a list of top rated styles from a particular site.</p>
+              <a href="rated.html" class="btn btn-danger">Get Your Styles</a>
+            </div>
+            <div class="card-footer text-muted">
+              Dev Notes: Need to work out array > 100 items when time permits. Since time never permits, who knows when.
+            </div>
+          </div>
+        </div>
+    <div class="col-sm-1"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrape Work</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="128x128" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .scraperAside{display:block;font-size:0.85rem;font-style:italic;background-color:#d6d6d6;padding:15px;margin-top:5px;}
+        .scraperH1{font-size:1.5rem;text-transform:uppercase;border-bottom:2px solid;margin-top:10px;}
+        .scraperInput{padding-left:5px;border-width:1px;border-top:none;border-right:none;border-left:none;border-bottom: 2px solid #d6d6d6;height:35px;min-width:30%;}
+        .scraperBTN{background:#000;border:1px solid #000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;margin-left:15px;}
+        .scraperBTN:hover{color:#000;background:#fff;}
+        .clearBTN{background:#000;color:#fff;text-transform:uppercase;height:35px;font-size:0.8rem;border:1px solid #000;}
+        .clearBTN:hover{background:#fff;border: 1px solid #000;color:#000;}
+        .resultsAside{display:block;font-size:1rem;background-color:#f1f1f1;padding:15px;margin-top:5px;border:1px solid #000;min-height: 90px;}
+        .marginTop{margin-top:15px;}
+        .centerTheText{text-align:center;}
+        .noMargin{margin: 0 auto;}
+        .resultsBlock{text-transform: uppercase;font-size: 0.8rem;border-bottom: 1px solid;}
+        .itemsFound{display:block;font-size:0.9rem;margin-top:5px;}
+        .dropdownSelect{display: block;margin-bottom:10px;font-size:0.85rem;min-height:35px;}
+        .blackBar{background:#000;color:#fff;font-size:0.7rem;text-align:center;padding:5px;}
+        .bottomMargin{margin-bottom:50px;}
+        #totalEachItemsFound{word-break:break-all;}
+        #eachItemFound{word-break:break-all;}
+    </style>
+</head>
+<body>
+    <div class="row blackBar ml-0 mr-0">
+        <p class="noMargin">The below apps may take a few extra seconds to work if ran after a 30 minute inactive period as it wakes up an external server to process the information.</p>
+    </div>
+    <div class="row ml-0 mr-0">
+        <div class="col-md-4 offset-md-1 col-10 offset-1">
+            <img class="marginTop" src="images/RockyBrands.png" style="margin-bottom:15px;display:block;">
+            <a href="index.html" alt="Go Back To Portal" style="color:#8a1913;">Go Back To Portal</a>
+        </div>
+    </div>
+    <div class="row ml-0 mr-0">
+        <div class="col-md-4 offset-md-1 col-10 offset-1">
+            <h1 class="scraperH1">Search Scraper</h1>
+            <p>To get a list of SKUs please provide what site you would like info from as well as the search term.
+                <span class="scraperAside">For example: You'd like to check Rocky Boots and obtain a list of styles that populate on the search results page for <b><i>duty</i></b> (https://www.rockyboots.com/Search?q=duty&lang=en_US). Just select Rocky Brands from the menu and then input <b><i>duty</i></b> into the search field and hit submit.</span>
+            </p>
+            <form>
+                <p class="mb-0">Select Your Site</p>
+                <select size="1" id="siteSelectionSearch" class="dropdownSelect">
+                    <option value="RB">Rocky Boots</option>
+                    <option value="GB">Georgia Boot</option>
+                    <option value="DB">Durango Boots</option>
+                    <option value="LO">Lehigh Outfitters</option>
+                    <option value="LSS">Lehigh Safety Shoes</option>
+                    <option value="SG">SlipGrips</option>
+                </select>
+                <input id="styleNums" placeholder="Search Term (e.g. duty)" class="scraperInput"></input>
+                <button type="button" class="scraperBTN" value='send' id="submit" onclick="getSearchStyles()">Submit</button>
+                <button type="button" class="clearBTN" value='send' id="submit" onclick="clearSearchResults()">Clear Results</button>
+            </form>
+        </div>
+        <div class="col-md-4 offset-md-1 col-10 offset-1">
+           
+            <h1 class="scraperH1">Page Scraper</h1>
+            <p>To get a list of SKUs please provide what site you would like info from as well as the page name.
+                <span class="scraperAside">For example: You'd like to check Rocky Boots and all the styles that populate on the Waterproof Boots page (rockyboots.com/waterproof-boots/). Just select Rocky Brands from the menu and then input "waterproof-boots" into the search field and hit submit.</span>
+            </p>
+            <form>
+                <p class="mb-0">Select Your Site</p>
+                <select size="1" id="siteSelection" class="dropdownSelect">
+                    <option value="RB">Rocky Boots</option>
+                    <option value="GB">Georgia Boot</option>
+                    <option value="DB">Durango Boots</option>
+                    <option value="LO">Lehigh Outfitters</option>
+                    <option value="LSS">Lehigh Safety Shoes</option>
+                    <option value="SG">SlipGrips</option>
+                </select>
+                <input id="styleNums1" placeholder="Input Page Name" class="scraperInput"></input>
+                <button type="button" class="scraperBTN" value='send' id="submit" onclick="getStyles()">Submit</button>
+                <button type="button" class="clearBTN" value='send' id="submit" onclick="clearResults()">Clear Results</button>
+            </form>
+        </div>
+    </div>
+    <div class="row marginTop fullResults ml-0 mr-0">
+        <div class="col-md-4 offset-md-1 col-10 offset-1">
+            <div class="centerTheText">
+                <p class="resultsAside">
+                    <span class="noMargin resultsBlock">Results</span>
+                    <span class="itemsFound" id="totalSearchItemsFound"></span>
+                    <span class="itemsFound" id="totalEachItemsFound"></span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 offset-md-1 col-10 offset-1">
+            <div class="centerTheText">
+                <p class="resultsAside">
+                    <span class="noMargin resultsBlock">Results</span>
+                    <span class="itemsFound" id="totalItemsFound"></span>
+                    <span class="itemsFound" id="eachItemFound"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+    function getSearchStyles() {
+        let styleNums = document.getElementById("styleNums").value;
+        console.log(typeof(styleNums));
+        let selectElement = document.querySelector('#siteSelectionSearch');   
+        let siteOutput = selectElement.value;
+        let correctResponse = 0;
+        var buildURL;
+        while (correctResponse != 1) {
+            if (siteOutput === "RB") {
+                buildURL = "https://www.rockyboots.com/Search?q=";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "GB") {
+                buildURL = "https://www.georgiaboot.com/";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "DB") {
+                buildURL = "https://www.durangoboots.com/";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LO") {
+                buildURL = "https://www.lehighoutfitters.com/";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "LSS") {
+                buildURL = "https://www.lehighsafetyshoes.com/";
+                correctResponse = 1;
+            }
+            else if (siteOutput === "SG") {
+                buildURL = "https://www.slipgrips.com/";
+                correctResponse = 1;
+            }
+            else {
+                correctResponse = 1;
+            }
+        }
+        var url = "https://rockybrands.herokuapp.com/" + buildURL + styleNums;
+        var request = $.get(url, function(response) {
+            var fullText = request.responseText;
+            var subStr = fullText.match("<div class=\"product-result-count d-none d-lg-block\">\n(.*) Items\n</div>");
+            subStr = subStr[1];
+            subStr = subStr.split(',').join('');
+            console.log(subStr);
+            url = url + "&sz=" + subStr;
+            console.log(url);
+            document.getElementById("totalSearchItemsFound").innerHTML = "Total Styles Found: " + subStr;
+            request = $.get(url, function(response) {
+                fullText = request.responseText;
+                console.log(fullText);
+                var styleArr = [], styleList = [];
+                console.log(styleArr);
+                var regex = /visually-hidden bfx-price-product bfx-sku">(.*)<\/span/gm;
+                try {
+                    for (var i = 0; ((styleArr = regex.exec(fullText)[1]) !== null); i++) {
+                            styleList[i] = `${styleArr}`;
+                            console.log(styleList[i]);
+                    }
+                }
+                catch (error) {
+                        console.error('TypeError Found. That\'s expected behavior when no more matches are found. Moving along...');
+                }
+                document.getElementById("totalEachItemsFound").innerHTML = (styleList + ",").slice(0,-1);
+            });
+        });
+    }
+    function clearSearchResults() {
+        document.getElementById("totalSearchItemsFound").innerHTML = '';
+        document.getElementById("totalEachItemsFound").innerHTML = '';
+    }
+    </script>
+        <script>
+            function getStyles() {
+                let styleNums1 = document.getElementById("styleNums1").value;
+                let selectElement1 = document.querySelector('#siteSelection');   
+                let siteOutput1 = selectElement1.value;
+                let correctResponse1 = 0;
+                var buildURL1;
+                while (correctResponse1 != 1) {
+                    if (siteOutput1 === "RB") {
+                        buildURL1 = "https://www.rockyboots.com/";
+                        correctResponse1 = 1;
+                    }
+                    else if (siteOutput1 === "GB") {
+                        buildURL1 = "https://www.georgiaboot.com/";
+                        correctResponse1 = 1;
+                    }
+                    else if (siteOutput1 === "DB") {
+                        buildURL1 = "https://www.durangoboots.com/";
+                        correctResponse1 = 1;
+                    }
+                    else if (siteOutput1 === "LO") {
+                        buildURL1 = "https://www.lehighoutfitters.com/";
+                        correctResponse1 = 1;
+                    }
+                    else if (siteOutput1 === "LSS") {
+                        buildURL1 = "https://www.lehighsafetyshoes.com/";
+                        correctResponse1 = 1;
+                    }
+                    else if (siteOutput1 === "SG") {
+                        buildURL1 = "https://www.slipgrips.com/";
+                        correctResponse1 = 1;
+                    }
+                    else {
+                        correctResponse1 = 1;
+                    }
+                }
+                var url1 = "https://rockybrands.herokuapp.com/" + buildURL1 + styleNums1;
+                var request1 = $.get(url1, function(response) {
+                    var fullText1 = request1.responseText;
+                    var subStr1 = fullText1.match("<div class=\"product-result-count d-none d-lg-block\">\n(.*) Items\n</div>");
+                    subStr1 = subStr1[1];
+                    subStr1 = subStr1.split(',').join('');
+                    console.log(subStr1);
+                    url1 = url1 + "/?sz=" + subStr1;
+                    console.log(url1);
+                    document.getElementById("totalItemsFound").innerHTML = "Total Styles Found: " + subStr1;
+                    request1 = $.get(url1, function(response) {
+                        fullText1 = request1.responseText;
+                        var styleArr1 = [], styleList1 = [];
+                        console.log(styleArr1);
+                        var regex1 = /visually-hidden bfx-price-product bfx-sku">(.*)<\/span/gm;
+                        try {
+                            for (var i = 0; ((styleArr1 = regex1.exec(fullText1)[1]) !== null); i++) {
+                                    styleList1[i] = `${styleArr1}`;
+                                    console.log(styleList1[i]);
+                            }
+                        }
+                        catch (error) {
+                                console.error('TypeError Found. That\'s expected behavior when no more matches are found. Moving along...');
+                        }
+                        document.getElementById("eachItemFound").innerHTML = (styleList1 + ",").slice(0,-1);
+                    });
+                });
+            }
+            function clearResults() {
+                document.getElementById("totalItemsFound").innerHTML = '';
+                document.getElementById("eachItemFound").innerHTML = '';
+            }
+            </script>
+</body>
+</html>
